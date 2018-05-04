@@ -15,17 +15,18 @@ import tecladoGenerico.TecladoGenerico.Rango;
 public class maquina extends Jugador {
 	
 	
-	private boolean ochoNegros=false;
+	private int rojo;
 	private ArrayList < Integer > coloresAcertados = new ArrayList <> ();
 	private HashSet < Integer > listaColores= new HashSet <> ();
-	private Combinacion[] peorIntento;
+	private Combinacion[] mejorIntento;
 	private HashSet < Combinacion[] > mejoresIntentos= new HashSet <> ();
 	private HashMap<Integer,Combinacion[]> aciertos=new HashMap <Integer,Combinacion[]>();
 	
 	
 	public maquina (ModoJuego modo) {
 		super( crearCombinacionGanadora( modo) , modo );
-		peorIntento= new Combinacion[modo.getNumCasillas()];
+		rojo=0;
+		mejorIntento= new Combinacion[modo.getNumCasillas()];
 		
 	}
 
@@ -147,63 +148,38 @@ public class maquina extends Jugador {
 		int i = 0;
 		boolean primeros = false;
 		boolean salir = false;
-		boolean completo=false;
 		int numero2=0;
+	
 		int aciertos=0;
-		Colores color;
 		if( coloresAcertados.size() == combinacionGanadora.length) {
 			
 			do {
-				if(ochoNegros) {
-					
-					do {
-						if(it.hasNext()) {
-					
-							color= new Colores((int) it.next());
-							do {
-								numero2 = (int)  (Math.random() *(combinacion.length-0))+0;
-							
-								if(combinacion[numero2]==null) {	
-									System.out.println(numero2);
-									if(peorIntento[numero2].getNumero()!=color.getNumero()) {
-										combinacion[numero2]=new Combinacion( color.getNumero());
-										completo=true;
-										
-									}
-								
-								}
-							
-							}while(!completo);
-							
-						}else {
-							salir=true;
-						}
-					
-						completo=false;
-					}while(!salir);
 				
-				}else {
-					if(it.hasNext()) {
-						numero2 = (int)  (Math.random() *(combinacion.length-0))+0;	
 				
-						if(numero2<combinacionGanadora.length && combinacion[numero2]==null) {
-							combinacion[numero2]=new Combinacion( (int) it.next() );
+				
+				if(it.hasNext()) {
+				 numero2 = (int)  (Math.random() *(combinacion.length-0))+0;	
+				
+					if(numero2<combinacionGanadora.length && combinacion[numero2]==null) {
+						combinacion[numero2]=new Combinacion( (int) it.next() );
 						
-						}
-					
-					}else {
-						if(!mejoresIntentos.contains(combinacion)) {
-							mejoresIntentos.add(combinacion);
-							salir=true;
-						
-						}else {
-						//System.out.println("repite");
-						//tecladoGenerico.TecladoGenerico.leerTeclado(Numero.INT);
-							it = coloresAcertados.iterator();
-						}
-					
 					}
+					
+				}else {
+					if(!mejoresIntentos.contains(combinacion)) {
+						mejoresIntentos.add(combinacion);
+						salir=true;
+						
+					}else {
+						System.out.println("repite");
+						tecladoGenerico.TecladoGenerico.leerTeclado(Numero.INT);
+
+						it = coloresAcertados.iterator();
+					}
+					
 				}
+				
+				
 				
 			}while(!salir);
 			salir=false;
@@ -311,7 +287,7 @@ public class maquina extends Jugador {
 
 	private void mejorIntento(ArrayList<String> lista) {
 		Iterator it = lista.iterator();
-		
+		 HashSet < Integer > intento= new HashSet <> ();
 		 Set<Integer> numeros=aciertos.keySet();
 		 Iterator itNum = numeros.iterator();
 		 String cadena;
@@ -327,9 +303,7 @@ public class maquina extends Jugador {
 				if(cadena==Colores.ROJO+"*"+Colores.RESET) {
 					rojos++;
 					
-				}else {
-					negros++;
-				}
+				}	
 			}else {
 				salir=true;
 			}
@@ -338,14 +312,11 @@ public class maquina extends Jugador {
 		}while(!salir);
 		
 	
-		if(negros==8) {
-			ochoNegros=true;
-			peorIntento=combinaciones;
-		}
 		
 		
-		//System.out.println("numero de aciertos "+ aciertos.keySet());
-		else if(aciertos.isEmpty()) {
+		
+		System.out.println("numero de aciertos "+ aciertos.keySet());
+		if(aciertos.isEmpty()) {
 			aciertos.put(rojos, combinaciones);
 		}else {
 			do {
@@ -355,9 +326,9 @@ public class maquina extends Jugador {
 						
 						aciertos.clear();
 						aciertos.put(rojos, combinaciones);
-						
-						//System.out.println("numero de aciertos "+ aciertos.keySet());
-						//Colores.mostrarColores(combinaciones);
+						mejorIntento=combinaciones;
+						System.out.println("numero de aciertos "+ aciertos.keySet());
+						Colores.mostrarColores(combinaciones);
 						if(rojos==8) {
 							tecladoGenerico.TecladoGenerico.leerTeclado(Numero.INT);
 						}
@@ -386,7 +357,7 @@ public class maquina extends Jugador {
 
 	public void mejorIntento() {
 		
-		Colores.mostrarColores(peorIntento);
+		Colores.mostrarColores(mejorIntento);
 	}
 
 	

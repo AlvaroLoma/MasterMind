@@ -21,9 +21,9 @@ public class Tablero {
 			do {
 				System.out.print("|");
 				if(intentos<9) {
-					System.out.print((intentos+1)+"  º| ");
+					System.out.print((intentos+1)+" º| ");
 				}else {
-					System.out.print((intentos+1)+" º| ");	
+					System.out.print((intentos+1)+"º| ");	
 				}
 				
 				for(int i=0;i<tableroPartida[intentos].length;i++) {
@@ -133,15 +133,9 @@ public class Tablero {
 			do {
 				System.out.print("|");
 				if(intento<9) {
-					System.out.print((intento+1)+"  º| ");
-				}
-				else if(intento>98){
-					System.out.print((intento+1)+"º| ");
-				}
-					
-				else {
-				
-					System.out.print((intento+1)+" º| ");	
+					System.out.print((intento+1)+" º| ");
+				}else {
+					System.out.print((intento+1)+"º| ");	
 				}
 				
 				for(int i=0;i<tableroPartida[intento].length;i++) {
@@ -164,12 +158,9 @@ public class Tablero {
 				}
 				System.out.print("|"+separacionV+"|");
 				if(intento<9) {
-					System.out.print((intento+1)+"  º| ");
-				}
-				else if(intento>98){
-					System.out.print((intento+1)+"º| ");
+					System.out.print((intento+1)+" º| ");
 				}else {
-					System.out.print((intento+1)+" º| ");	
+					System.out.print((intento+1)+"º| ");	
 				}
 				for(int i=0;i<tableroPartida[intento].length;i++) {
 					if(tablero2.tableroPartida[intento][i]!=null) {

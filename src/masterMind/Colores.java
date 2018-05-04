@@ -137,9 +137,4 @@ public class Colores {
 			}
 			System.out.println();
 		}
-
-		public void setNumero(Object next) {
-			// TODO Auto-generated method stub
-			
-		}
 }
