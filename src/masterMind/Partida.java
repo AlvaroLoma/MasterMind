@@ -1,0 +1,122 @@
+package masterMind;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import tecladoGenerico.TecladoGenerico;
+import tecladoGenerico.TecladoGenerico.Numero;
+import tecladoGenerico.TecladoGenerico.Rango;
+
+public class Partida {
+
+		static HashMap<String,Boolean> conjunto=new HashMap <String,Boolean>();
+		private static int NUMCOLORES;
+		protected Tablero tablero;
+		protected Tablero tablero2;
+		private ModoJuego modo;
+		
+		
+		public Partida(ModoJuego modo2) {
+			modo=modo2;
+			NUMCOLORES=modo2.getMaxColores();
+			cargarModo();
+		}
+
+		private void cargarModo() {
+			tablero=new Tablero(modo);
+			 tablero2=new Tablero(modo);
+			
+		}
+
+
+
+		public void comprobacion(ArrayList<String> comprobarCombinacion) {
+			tablero.comprobacion(comprobarCombinacion);
+			
+		}
+
+
+		public boolean buscarGanador() {
+			return tablero.buscarGanador();
+			
+		}
+
+
+		public void aumentarIntento() {
+		tablero.aumentoIntento();
+		}
+
+
+		public boolean quedanIntentos() {
+		
+			return tablero.quedanIntentos(modo.getIntentos());
+		}
+
+
+
+		public void comprobacionM(ArrayList<String> comprobarCombinacion) {
+			
+			tablero2.comprobacion(comprobarCombinacion);
+			
+		}
+
+		
+
+		public void dibujarTableroDoble() {
+			tablero.dibujarTableros(tablero,tablero2);
+			
+		}
+
+		public int empate() {
+			int jugador1=0;
+			int jugador2=0;
+			int ganador=0;
+			jugador1=tablero.numeroAciertos();
+			jugador2=tablero2.numeroAciertos();
+	
+			if(jugador1>jugador2) {
+				ganador=1;
+			}
+			else if(jugador1<jugador2) {
+				ganador=2;
+			}else {
+				ganador=3;
+			}
+			
+			return ganador;
+		}
+
+		public void intentoUsuario(Combinacion[] nuevoIntento, Object comprobacion) {
+			tablero.nuevoIntento(nuevoIntento);
+			tablero.comprobacion((ArrayList<String>) comprobacion);
+		}
+
+		public void intentoMaquina(Combinacion[] intentoIA, Object comprobacion) {
+			tablero2.nuevoIntento(intentoIA);
+			tablero2.comprobacion((ArrayList<String>) comprobacion);
+		}
+
+		public void dibujarTableroUsuario() {
+			tablero.dibujarTablero();
+		}
+
+		public void dibujarTableroMaquina() {
+			tablero2.dibujarTablero();
+		}
+
+		public boolean UsuarioGanador() {
+			return tablero.buscarGanador();
+		}
+
+		public boolean MaquinaGanador() {
+			return tablero2.buscarGanador();
+		}
+
+		public void IA(Combinacion[] nuevoIntento, Combinacion[] nuevoIntento2) {
+			tablero.nuevoIntento(nuevoIntento);
+			tablero2.nuevoIntento(nuevoIntento2);
+		}
+		
+		
+	}
+
