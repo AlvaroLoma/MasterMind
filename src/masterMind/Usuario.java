@@ -58,7 +58,7 @@ public class Usuario extends Jugador {
 		return nuevoIntento;
 	
 	}
-	
+
 	
 
 

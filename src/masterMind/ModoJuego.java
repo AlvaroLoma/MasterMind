@@ -4,7 +4,7 @@ public enum ModoJuego {
 
 		FACIL(10,4,false,8),
 		MEDIO(15,6,false,8),
-		DIFICIL(1000000,8,true,10);
+		DIFICIL(10000,8,true,10);
 		
 		private int intentos;
 		private int numCasillas;
