@@ -40,6 +40,7 @@ public class Colores {
 	
 		protected int numero;
 		protected String colores;
+	
 		public Colores(int color) {
 			
 			switch(color){

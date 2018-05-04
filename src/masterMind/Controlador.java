@@ -57,13 +57,13 @@ public class Controlador {
 		
 			partida.intentoUsuario(jugador1.nuevoIntento(),jugador1.comprobacion());
 			partida.intentoMaquina(jugador2.nuevoIntento(),jugador2.comprobacion());
-			//partida.dibujarTableroDoble();
+			partida.dibujarTableroDoble();
 			partida.aumentarIntento();
-//			try{ 
-//				Thread.sleep(500);
-//			}catch(InterruptedException e ) { 
-//				System.out.println("Thread Interrupted"); 
-//			}
+			try{ 
+				Thread.sleep(500);
+			}catch(InterruptedException e ) { 
+				System.out.println("Thread Interrupted"); 
+			}
 //			if(partida.UsuarioGanador() && !partida.MaquinaGanador()) {
 //				System.out.println("El jugador 1 es el ganador!!!!");
 //				salir=true;
@@ -73,10 +73,9 @@ public class Controlador {
 //				salir=true;
 //			}
 			limite++;
-			System.out.println(limite);
-		}while(limite<10000);
-		jugador1.mejorIntento();
-		jugador2.mejorIntento();
+		
+		}while(limite<50);
+	
 		
 	}
 

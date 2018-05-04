@@ -14,8 +14,14 @@ import tecladoGenerico.TecladoGenerico.Rango;
 
 public class maquina extends Jugador {
 	
+	private boolean buscarPosiciones;
+	private boolean coloresEncontrados;
+	private HashMap<Integer,Boolean[]> posiciones=new HashMap <Integer,Boolean[]>();
+	private Combinacion[] intentoFinal;
+	private int numeroColor;
+	private Colores noEsta;
 	
-	private int rojo;
+	
 	private ArrayList < Integer > coloresAcertados = new ArrayList <> ();
 	private HashSet < Integer > listaColores= new HashSet <> ();
 	private Combinacion[] mejorIntento;
@@ -25,7 +31,10 @@ public class maquina extends Jugador {
 	
 	public maquina (ModoJuego modo) {
 		super( crearCombinacionGanadora( modo) , modo );
-		rojo=0;
+		coloresEncontrados=false;
+		buscarPosiciones=false;
+		numeroColor=0;
+		intentoFinal=new Combinacion[modo.getNumCasillas()];
 		mejorIntento= new Combinacion[modo.getNumCasillas()];
 		
 	}
@@ -118,29 +127,187 @@ public class maquina extends Jugador {
 		
 	}
 	
+//	protected Combinacion[] nuevoIntento() {
+//		ArrayList < String > lista = new ArrayList();
+//		Iterator it = lista.iterator();
+//		Combinacion[] combinacion = new Combinacion[combinacionGanadora.length];
+//		
+//		combinacion = demasIntentoIA();
+//		lista.clear();
+//		lista=comprobacion();
+//		if(lista.size()==combinacionGanadora.length) {
+//		mejorIntento(lista);	
+//		}
+//		coloresAcertados.clear();
+//		if(lista.isEmpty()) {
+//			listaColores.add( combinaciones[0].getNumero() );
+//		}else {
+//			for(int x = 0 ; x < lista.size() ; x++ ) {
+//				coloresAcertados.add( combinaciones[x].getNumero() );
+//			}
+//		}
+//		return combinacion;
+//	}
 	protected Combinacion[] nuevoIntento() {
-		ArrayList < String > lista = new ArrayList();
-		Iterator it = lista.iterator();
-		Combinacion[] combinacion = new Combinacion[combinacionGanadora.length];
+		int numero = 0;
+		Combinacion[] combinacion = new Combinacion[modo.getNumCasillas()];
+		boolean salir=false;
+		boolean primeros=false;
+		boolean colorNoEsta=false;
+		int code=0;
+		ArrayList<String> lista= new ArrayList();
+		Iterator it = coloresAcertados.iterator();
 		
-		combinacion = demasIntentoIA();
-		lista.clear();
-		lista=comprobacion();
-		if(lista.size()==combinacionGanadora.length) {
-		mejorIntento(lista);	
+		if(!buscarPosiciones) {
+			if(!coloresAcertados.isEmpty()) {
+				
+				if(coloresAcertados.size()==modo.getNumCasillas()) {
+					for(int x =0;x<coloresAcertados.size();x++) {
+						if(posiciones.containsKey(coloresAcertados.get(x).hashCode())) {
+							code=coloresAcertados.get(x).hashCode();
+							code=code+x;
+							
+							posiciones.put(code, new Boolean[modo.getNumCasillas()]);	
+							
+						}else {
+							posiciones.put(coloresAcertados.get(x).hashCode(), new Boolean[modo.getNumCasillas()]);	
+							
+						}
+						
+						for(int e =0;e<modo.getNumCasillas();e++) {
+							posiciones.get(coloresAcertados.get(x).hashCode())[e]=true;
+						}
+						
+					}
+				
+					do {
+						numero = (int) ( Math.random() * modo.getMaxColores() + 1 );
+						if(!coloresAcertados.contains(numero)) {
+						
+							noEsta = new Colores(numero);
+							colorNoEsta=true;
+						}
+						
+					}while(!colorNoEsta);
+					buscarPosiciones=true;
+					coloresEncontrados=true;
+				}else {
+					do {
+						
+						if(it.hasNext()) {
+							
+							combinacion[numero]= new Combinacion((int) it.next());
+							numero++;
+						}else {
+							primeros=true;
+						}
+						
+					}while(!primeros);
+				}
+		
+			}	
 		}
-		coloresAcertados.clear();
-		if(lista.isEmpty()) {
-			listaColores.add( combinaciones[0].getNumero() );
-		}else {
-			for(int x = 0 ; x < lista.size() ; x++ ) {
-				coloresAcertados.add( combinaciones[x].getNumero() );
+	
+		
+		
+		if(!coloresEncontrados) {
+			
+			do {
+				
+				numero = (int) ( Math.random() * modo.getMaxColores() + 1 );
+				
+				if(!listaColores.contains(numero)) {
+					listaColores.add(numero);
+					for(int x = coloresAcertados.size() ; x <combinacionGanadora.length ; x++ ) {
+						combinacion[x] = new Combinacion(numero);
+						
+					}
+					salir=true;
+				}
+			}while(!salir);
+			combinaciones=combinacion;
+			coloresAcertados.clear();
+			lista=comprobacion();
+			
+			if(!lista.isEmpty()) {
+				for(int x=0;x<lista.size();x++) {
+					coloresAcertados.add(combinacion[x].getNumero());
+					
+				}
+			}else {
+				listaColores.add(numero);
+				
 			}
+			
+		}else {
+			
+			
+			combinacion=buscarPosiciones();
+			
+			
+			
 		}
+		
 		return combinacion;
 	}
 
 
+
+	private Combinacion[] buscarPosiciones() {
+		ArrayList<String> lista= new ArrayList();
+		int numero = 0;
+		boolean salir=false;
+		boolean buscaPosicion=false;
+		Combinacion[] combinacion = new Combinacion[modo.getNumCasillas()];
+		
+				
+				do {
+					
+					if(numeroColor>=modo.getNumCasillas()) {
+						System.out.println("encontrada");
+						
+						combinaciones=intentoFinal;
+						salir=true;
+					}else {
+						for(int x =0;x<modo.getNumCasillas();x++) {
+							combinacion[x] = new Combinacion(noEsta.numero);
+						}
+						numero = (int) ( Math.random() * modo.getMaxColores() + 1 );
+						System.out.println(numero);
+					if(numeroColor<modo.getNumCasillas() && numero<modo.getNumCasillas() && posiciones.get(coloresAcertados.get(numeroColor).hashCode())[numero]==true) {
+						combinacion[numero]= new Combinacion(coloresAcertados.get(numeroColor));
+						salir=true;
+						combinaciones=combinacion;
+					}	
+					
+					}
+					
+				}while(!salir);
+				
+			if(numeroColor<modo.getNumCasillas()) {
+				lista=comprobacion();
+				if(lista.get(0)==Colores.ROJO+"*"+Colores.RESET) {
+					if(intentoFinal[numero]==null) {
+						intentoFinal[numero]= new Combinacion(coloresAcertados.get(numeroColor));
+						posiciones.remove(coloresAcertados.get(numeroColor).hashCode(), null);
+						numeroColor++;
+					}else {
+						posiciones.get(coloresAcertados.get(numeroColor).hashCode())[numero]=false;
+					}
+					
+					
+				}else {
+					posiciones.get(coloresAcertados.get(numeroColor).hashCode())[numero]=false;
+				}
+				
+			}
+				
+				
+		return combinacion;
+		
+	
+	
+	}
 
 	private Combinacion[] demasIntentoIA() {
 		Combinacion[] combinacion = new Combinacion[combinacionGanadora.length];
@@ -219,12 +386,15 @@ public class maquina extends Jugador {
 	public ArrayList<String> comprobacion() {
 		
 		HashMap<Integer,String> conjuntoColores=new HashMap <Integer,String>();
+		ArrayList<String> listaf= new ArrayList();
 		ArrayList<String> lista= new ArrayList();
+		Iterator it =lista.iterator();
 		String rojo=Colores.ROJO+"*"+Colores.RESET;
 		String negro=Colores.NEGRO+"*"+Colores.RESET;
+		String comprobar="";
 		boolean encontrado=false;
 		boolean salir=false;          
-	
+		int numero=0;
 		int uno=0;
 		int dos=0;
 		int x=0;
@@ -238,21 +408,30 @@ public class maquina extends Jugador {
 						if(x<combinacionGanadora.length && combinaciones[x].equals(combinacionGanadora[dos])) {
 							
 							if(x==dos) {
-								conjuntoColores.remove(dos, negro);
-								conjuntoColores.put(dos, rojo);
+								lista.remove(negro);
+								lista.add(rojo);
+								
+								conjuntoColores.remove(numero, negro);
+								
+								conjuntoColores.put(numero, rojo);
+								numero++;
 								dos++;
 								uno=-1;
 								salir=true;
 							}else {
 								if(!encontrado) {
-								conjuntoColores.put(dos, negro);
+									lista.add(negro);
+								conjuntoColores.put(numero, negro);
+								numero++;
 								encontrado=true;
 								}
 								
 							}
 						}else {
 							if(!encontrado) {
+								lista.add(negro);
 								conjuntoColores.put(0, negro);
+								numero++;
 								encontrado=true;
 								}
 						}
@@ -260,6 +439,7 @@ public class maquina extends Jugador {
 							salir=true;
 						}
 					x++;
+					
 					}while(!salir);
 					
 				encontrado=false;
@@ -278,10 +458,29 @@ public class maquina extends Jugador {
 			
 			uno++;	
 		}while(!salir);
-	
-		lista.addAll(conjuntoColores.values());
+																			//ordenar comprobacion
+		for(int e=0;e<modo.getNumCasillas();e++) {
+			if(it.hasNext()) {
+				comprobar=(String) it.next();
+				if(comprobar==rojo) {
+					listaf.add(rojo);
+				}
+			}
+			
+		}
+		it =lista.iterator();
+		for(int e=0;e<modo.getNumCasillas();e++) {
+			if(it.hasNext()) {
+				comprobar=(String) it.next();
+				if(comprobar==negro) {
+					listaf.add(negro);
+				}
+			}
+			
+		}
 		
-		return lista;
+		
+		return listaf;
 		
 	}
 

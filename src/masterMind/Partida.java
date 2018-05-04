@@ -9,8 +9,8 @@ import tecladoGenerico.TecladoGenerico.Rango;
 
 public class Partida {
 
-		static HashMap<String,Boolean> conjunto=new HashMap <String,Boolean>();
-		private static int NUMCOLORES;
+	
+		
 		protected Tablero tablero;
 		protected Tablero tablero2;
 		private ModoJuego modo;
@@ -18,16 +18,12 @@ public class Partida {
 		
 		public Partida(ModoJuego modo2) {
 			modo=modo2;
-			NUMCOLORES=modo2.getMaxColores();
-			cargarModo();
-		}
-
-		private void cargarModo() {
-			tablero=new Tablero(modo);
+		tablero=new Tablero(modo);
 			 tablero2=new Tablero(modo);
 			
 		}
 
+		
 
 
 		public void comprobacion(ArrayList<String> comprobarCombinacion) {

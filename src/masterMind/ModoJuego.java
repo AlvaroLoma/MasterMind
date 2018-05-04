@@ -31,7 +31,7 @@ public enum ModoJuego {
 		}
 
 		public int getMaxColores() {
-			// TODO Auto-generated method stub
+		
 			return this.maxColores;
 		}
 
