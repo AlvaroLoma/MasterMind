@@ -3,36 +3,47 @@ package masterMind;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * @author Loma
+ *
+ */
 public abstract class Jugador {
 
 	protected Combinacion combinacionGanadora[];
 	protected Combinacion[] combinaciones;
 	protected ModoJuego modo;
 
+	/**
+	 * @param combinacion
+	 * @param modo
+	 */
 	public Jugador(Combinacion[] combinacion, ModoJuego modo) {
 		this.modo = modo;
 		combinacionGanadora = new Combinacion[combinacion.length];
 		cargarCombinacion(combinacion);
 		combinaciones = new Combinacion[combinacion.length];
-		Colores.mostrarColores(combinacionGanadora);
+		
 
 	}
 
 	private void cargarCombinacion(Combinacion[] combinacion) {
 
 		for (int i = 0; i < combinacionGanadora.length; i++) {
-			combinacionGanadora[i] = new Combinacion(combinacion[i].casilla.color.numero);
+			combinacionGanadora[i] = new Combinacion(combinacion[i].getNumero());
 
 		}
 
 	}
 
+	/**
+	 * @return
+	 */
 	public ArrayList<String> comprobacion() {
 		HashMap<String, String> conjunto = new HashMap<String, String>();
 		ArrayList<String> lista = new ArrayList<String>();
 		String rojo = Colores.ROJO + "*" + Colores.RESET;
 		String negro = Colores.NEGRO + "*" + Colores.RESET;
-
+		boolean remplazar=false;
 		boolean salir = false;
 		int acierto = 0;
 		int uno = 0;
@@ -40,30 +51,36 @@ public abstract class Jugador {
 
 		do {
 
-			if (uno < combinaciones.length && combinaciones[uno].equals(combinacionGanadora[dos])) {
+			if (uno < modo.getNumCasillas() && combinaciones[uno].equals(combinacionGanadora[dos])) {
 
 				if (!conjunto.containsKey(combinaciones[uno].getCasilla())) {
 
 					if (uno == dos) {
-
+						
 						conjunto.put(combinaciones[uno].getCasilla(), rojo);
+						remplazar=true;
 
 					} else {
-
+					
 						conjunto.put(combinaciones[uno].getCasilla(), negro);
 					}
 
 				} else {
 
 					if (uno == dos) {
-						if (!modo.isRepetirColores()) {
-							conjunto.replace(combinaciones[uno].getCasilla(), negro, rojo);
-						} else {
-							conjunto.put(combinaciones[uno].getCasilla(), rojo);
-						}
+					
+						conjunto.remove(combinaciones[uno].getCasilla());
+						
+						conjunto.put(combinaciones[uno].getCasilla(), rojo);
+						remplazar=true;
 
 					} else {
-						conjunto.put(combinaciones[uno].getCasilla(), negro);
+						if(!remplazar) {
+							
+							conjunto.put(combinaciones[uno].getCasilla(), negro);
+							remplazar=true;
+						}
+						
 					}
 				}
 				uno++;
@@ -95,6 +112,9 @@ public abstract class Jugador {
 
 
 
+	/**
+	 * 
+	 */
 	public void mostrarCombinacionGanadora() {
 		Colores.mostrarColores(combinacionGanadora);
 

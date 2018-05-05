@@ -77,11 +77,14 @@ public class Maquina extends Jugador {
 		return combinacion;
 	}
 
+	/**
+	 * @return
+	 */
 	public ArrayList<String> comprobacionM() {
 		int numero = 0;
-
+		boolean comprobacion=false;
 		ArrayList<String> lista = new ArrayList<String>();
-
+		ArrayList<String> listaComprobacion = new ArrayList<String>();
 		boolean salir = false;
 		System.out.println("Combinacion ganadora: ");
 		Colores.mostrarColores(combinacionGanadora);
@@ -102,6 +105,31 @@ public class Maquina extends Jugador {
 			}
 		} while (!salir);
 
+		
+		listaComprobacion=comprobacion();
+		
+		if(lista.size()==listaComprobacion.size()) {
+			Iterator <String> it = listaComprobacion.iterator();
+			do {
+				if(it.hasNext()) {
+					
+					if(!lista.contains(it.next())) {
+						System.out.println("Error. La comprobacion introducida es erronea, cargando la comprobacion autentica");
+						lista.clear();
+						lista.addAll(listaComprobacion);
+					}
+				}else {
+					comprobacion=true;
+				}
+				
+			}while(!comprobacion);
+			
+		}else {
+			System.out.println("Error. La comprobacion introducida es erronea, cargando la comprobacion autentica");
+			lista.clear();
+			lista.addAll(listaComprobacion);
+		}
+		
 		return lista;
 	}
 

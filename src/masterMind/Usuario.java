@@ -1,18 +1,24 @@
 package masterMind;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import tecladoGenerico.TecladoGenerico;
 import tecladoGenerico.TecladoGenerico.Numero;
 import tecladoGenerico.TecladoGenerico.Rango;
 
+/**
+ * @author Saladillo
+ *
+ */
 public class Usuario extends Jugador {
 	
 	
 	
 	protected ModoJuego modo;
 	
+	/**
+	 * @param modo
+	 */
 	public Usuario(ModoJuego modo) {
 		super(crearCombinacionGanadora(modo),modo);
 		this.modo=modo;
@@ -41,13 +47,14 @@ public class Usuario extends Jugador {
 				contador++;
 			}
 		}while(contador<modo.getNumCasillas());
+		Colores.mostrarColores(combinacion);
 		return combinacion ;	
 	}
 	
 	
 	public Combinacion[] nuevoIntento() {
 		Combinacion nuevoIntento[]= new Combinacion[modo.getNumCasillas()];
-		System.out.println(modo.getNumCasillas());
+	
 			for(int x=0;x<modo.getNumCasillas();x++) {
 				nuevoIntento[x]=new Combinacion(TecladoGenerico.leerRangoDeterminado(8, 1, Rango.AMBOSIN, Numero.INT));
 		
