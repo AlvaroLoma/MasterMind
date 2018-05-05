@@ -3,20 +3,30 @@ package masterMind;
 import tecladoGenerico.TecladoGenerico;
 
 /**
- * @author Saladillo
+ *La clase controlador sera utilizada para implementar un main dinamico.
+ *La clase controlador controla toda la informacion sobre la partida, los jugadores y el modo de juego 
+ *@author Alvaro Lodeiro
  *
- *	La clase controlador sera utilizada para implementar un main dinamico.
- *	La clase controlador controla toda la informacion sobre la partida, los jugadores y el modo de juego
+ *	
  */
 public class Controlador {
 	/**
-	 * Atributos necesarios para la clase controlador, un objeto partida, dos jugadores y el modo de juego
+	 * Atributo clase partida, necesario para el desarrollo de la partida
 	 */
 	//Atributos necesarios para el objeto controlador, estos son una partida, dos jugadores y el modo que nos dara
 	//toda la informacion que necesitamos
 	private Partida partida;
+	/**
+	 * Atributo clase Jugador, necesario para el control de jugador 1
+	 */
 	private Jugador jugador1;
+	/**
+	 * Atributo clase Jugador, necesario para el control de jugador 2
+	 */
 	private Jugador jugador2;
+	/**
+	 * Atributo clase ModoJuego, necesario para cargar las normas del modo de juego
+	 */
 	private ModoJuego modo;
 	
 	/**
@@ -108,11 +118,11 @@ public class Controlador {
 			}
 			if (partida.UsuarioGanador()) {
 				System.out.println("El jugador 1 es el ganador!!!!");
-				jugador1.mostrarCombinacionGanadora();
+				Colores.mostrarColores(jugador1.combinacionGanadora);
 				salir = true;
 			} else if (partida.MaquinaGanador()) {
 				System.out.println("El jugador 2 es el ganador!!!!");
-				jugador2.mostrarCombinacionGanadora();
+				Colores.mostrarColores(jugador2.combinacionGanadora);
 				salir = true;
 			}
 		
@@ -122,14 +132,28 @@ public class Controlador {
 	}
 		/**
 		 * Metodo encargado en desarrollar la partida en el modo de juego medio
+		 *
 		 */
+	
+	/*
+	 * 1º Solicitamos a ambos jugadores que introduzcan un nuevo intento
+	 * 2º Comprobamos el intento introduzido por los usuarios
+	 * 		2.1 En el caso de la maquina sera el usuario quien introduca la comprobacion de forma manual
+	 * 3º Dibujamos ambos tableros
+	 * 4º Comprobamos si alguno de los dos jugadores ha conseguido acertar la combinacion
+	 * 5º Si ningun jugador ha acertado la combinacion aumentaremos en uno los intentos
+	 * 6º Comprobamos si quedan o no intentos 
+	 * 		6.1 Si quedan intentos volveremos al paso 1
+	 * 		6.2 Si no quedan intentos se comprobara cual de los dos jugadores tiene mas numero de aciertos, este jugador sera el ganador
+	 * 			6.2.1 Si ambos jugadores tienen el mismo numero de aciertos se declarara un empante
+	 */
 	private void jugar() {
 		boolean salir = false;
 		int ganador = 0;
 		System.out.println("Empieza la partida: ");
 		do {
 			System.out.println("Elija una nueva combinacion: ");
-			Colores.mostrarColores();
+			Colores.mostrarColores(modo);
 			partida.intentoUsuario(jugador1.nuevoIntento(), jugador1.comprobacion());
 			partida.intentoMaquina(jugador2.nuevoIntento(), ((Maquina) jugador2).comprobacionM());
 			partida.dibujarTableroDoble();
@@ -168,16 +192,44 @@ public class Controlador {
 		} while (!salir);
 
 	}
-
+	/**
+	 * Metodo que muestra la pantalla de inicio del juego y la ayuda si el usuario lo desea
+	 */
+	/*
+	 * 1º Mostraremos el menu de inicio al usuario para que decida si desea jugar directamente o que se muestra una ayuda de como jugar
+	 * 		1.1 Si el usuario elige "Como jugar" mostraremos una explicacion del juego y de los modos de juego
+	 */
 	private void pantallaInicio() {
 		System.out.println();
 		if (!TecladoGenerico.leerBolean("!BIENVENIDO\n     A\nMASTERMIND¡\n", "Nueva Partida", "Como Jugar")) {
 
-			System.out.println("Ayuda");
+			System.out.println("MasterMind es un juego de logica en el cual pueden participar uno o dos jugadores."
+					+ "\nEl juego consiste en adivinar una combinacion secreta de colores mediante intentos de combinaciones\nlas cuales devolveran una secuencia de caracteres que indicaran el numero de aciertos:"
+					+ ""
+					+ "\nUn * rojo: Indica que se ha acertado tanto en color como en posicion."
+					+ "\nUn * negro: Indica que se ha acertado el color pero no la posicion."
+					+ "\nLas reglas del juego dependeran del modo de juego que se seleccione:"
+					+ "\nModo facil: En el modo facil constara de 4 casillas, 8 colores, 10 intentos y no se podran repetir colores, El usuario tambien debera elegir quien jugara: Si el o la maquina."
+					+ "\nModo medio: En el modo medio constara de 6 casillas, 8 colores y 15 intentos y no se podran repetir colores, En este modo jugaran ambos, usuario y maquina."
+					+ "\nModo dificil: En el modo dificil constara de 8 casillas, 10 colores y un numero ilimitado de intentos, En este modo jugaran la maquina contra la maquina.\n");
 		}
 
 	}
 
+	/**
+	 * Metodo que desarrolla el juego en modo facil
+	 */
+	/*
+	 * 1º Comprobaremos cual de los dos jugadores esta jugando
+	 * 2º Pedimos a ese usuario que introduzca un nuevo intento y lo comprobaremos
+	 * 3º Dibujamos el tablero
+	 * 4º Comprobamos si el jugador ha acertado la combinacion
+	 * 		4.1 Si la ha acertado mostramos el mansaje de que ha ganado
+	 * 		4.2 Si no ha acertado aumentaremos en uno el numero de intentos
+	 * 5º Comprobaremos si al usuario le quedan intentos
+	 * 		5.1 Si le quedan intentos volveremos al paso 1º
+	 * 		5.2 Si no quedan intentos le comunicaremos al jugador que ha perdido la partida
+	 */
 	private void jugarModoFacil() {
 		boolean salir = false;
 		System.out.println("Empieza a jugar  ");
@@ -187,7 +239,7 @@ public class Controlador {
 
 				if (jugador1 != null) {
 					System.out.println("Elija una nueva combinacion: ");
-					Colores.mostrarColores();
+					Colores.mostrarColores(modo);
 					partida.intentoUsuario(jugador1.nuevoIntento(), jugador1.comprobacion());
 					partida.dibujarTableroUsuario();
 
@@ -219,7 +271,13 @@ public class Controlador {
 		} while (!salir);
 
 	}
-
+		/**
+		 * Metodo que muestra los diversos modos de juegos y solicita al usuario que elija uno de ellos para cargar las normas de la partida
+		 */
+	/*
+	 * 1º Mostramos al usuario un menu para que elija un modo de juego
+	 * 2º Cuando el usuario haya seleccionado un modo de juego, cargaremos dicho modo
+	 */
 	private void menuModoJuego() {
 
 		int opcion = 0;

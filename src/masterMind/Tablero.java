@@ -3,17 +3,38 @@ package masterMind;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * Clase tablero carga los intentos y sus comprobaciones y dibuja los tableros
+ * @author Alvaro Lodeiro
+ *
+ */
 public class Tablero {
+	/**
+	 * Array de doble dimension que almacen las comprobaciones
+	 */
 	protected String comprobacion[][];
+	/**
+	 * Array de doble dimension que almacena los intentos
+	 */
 	private Combinacion tableroPartida[][];
+	/**
+	 * Atributo estatico que controla los intentos de ambos tableros
+	 */
 	static protected int intento = 0;
 
+	/**
+	 * Crea un tablero
+	 * @param modo con la configuracion de la partida
+	 */
 	public Tablero(ModoJuego modo) {
 		tableroPartida = new Combinacion[modo.getIntentos()][modo.getNumCasillas()];
 		comprobacion = new String[modo.getIntentos()][modo.getNumCasillas()];
 
 	}
 
+	/**
+	 * Dibuja un tablero simple
+	 */
 	public void dibujarTablero() {
 		boolean salir = false;
 		int intentos = 0;
@@ -55,6 +76,10 @@ public class Tablero {
 
 	}
 
+	/**
+	 * Carga un nuevo intento en el tablero
+	 * @param nuevoIntento nuevo intento a cargar
+	 */
 	public void nuevoIntento(Combinacion[] nuevoIntento) {
 
 		for (int i = 0; i < nuevoIntento.length; i++) {
@@ -64,6 +89,10 @@ public class Tablero {
 
 	}
 
+	/**
+	 * Carga una comprobacion en el tablero
+	 * @param arrayList nueva comprobacion a cargar
+	 */
 	public void comprobacion(ArrayList<String> arrayList) {
 		Iterator<String> it = arrayList.iterator();
 		boolean salir = false;
@@ -80,12 +109,20 @@ public class Tablero {
 
 	}
 
+	/**
+	 * Aumenta el numero de intento
+	 */
 	public void aumentoIntento() {
 
 		intento++;
 
 	}
 
+	/**
+	 * 
+	 * Comprueba si el jugador ha ganado la partida
+	 * @return Devuelve si el jugador ha ganado o no la partida
+	 */
 	public boolean buscarGanador() {
 		int correcto = 0;
 		boolean ganador = false;
@@ -104,11 +141,21 @@ public class Tablero {
 		return ganador;
 	}
 
+	/**
+	 * Comprueba si el numero de intentos de la partida actual es mayor o no del numero de intento
+	 * @param intentos numero de intentos actuales de la partida
+	 * @return si el numero de intento actual es menor o no que el numero de intento
+	 */
 	public boolean quedanIntentos(int intentos) {
 
 		return intento >= intentos;
 	}
 
+	/**
+	 * Recibe dos tableros y los dibuja por pantalla
+	 * @param tablero1 tablero a dibujar
+	 * @param tablero2 tablero a dibujar
+	 */
 	public void dibujarTableros(Tablero tablero1, Tablero tablero2) {
 		boolean salir = false;
 		String separacionV = "          ";
@@ -182,6 +229,10 @@ public class Tablero {
 
 	}
 
+	/**
+	 * Calcula el numero de aciertos de un jugador para determinar los empates
+	 * @return el numero de aciertos que tiene el jugador
+	 */
 	public int numeroAciertos() {
 		int correcto = 0;
 

@@ -4,18 +4,27 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * @author Loma
+ * Clase abstracta Jugador, encargado de controlar la herencia de los jugadores y de almacenar informacion comun de todos los jugadores
+ * @author Alvaro Lodeiro
  *
  */
 public abstract class Jugador {
-
+	/**
+	 * Atributo que guarda la combinacion Ganadora que debera ser adivinada
+	 */
 	protected Combinacion combinacionGanadora[];
+	/**
+	 * Atributo que almacena la ultima combinacion del jugador
+	 */
 	protected Combinacion[] combinaciones;
+	/**
+	 * Atributo que almacena la informacion sobre el modo de juego
+	 */
 	protected ModoJuego modo;
 
 	/**
-	 * @param combinacion
-	 * @param modo
+	 * @param combinacion Combinacion ganadora que sera almacenada en el atributo combinacionGanadora
+	 * @param modo carga el modo de juego 
 	 */
 	public Jugador(Combinacion[] combinacion, ModoJuego modo) {
 		this.modo = modo;
@@ -25,7 +34,10 @@ public abstract class Jugador {
 		
 
 	}
-
+	/**
+	 * Carga una combinacion como combinacion Ganadora
+	 * @param combinacion Que sera cargada en el atributo combinacionGanadora
+	 */
 	private void cargarCombinacion(Combinacion[] combinacion) {
 
 		for (int i = 0; i < combinacionGanadora.length; i++) {
@@ -36,7 +48,8 @@ public abstract class Jugador {
 	}
 
 	/**
-	 * @return
+	 * Comprueba la ultima jugada del jugador y crea una lista con la comprobacion
+	 * @return una lista con la comprobacion de una jugada
 	 */
 	public ArrayList<String> comprobacion() {
 		HashMap<String, String> conjunto = new HashMap<String, String>();
@@ -110,14 +123,6 @@ public abstract class Jugador {
 	abstract protected Combinacion[] nuevoIntento();
 
 
-
-
-	/**
-	 * 
-	 */
-	public void mostrarCombinacionGanadora() {
-		Colores.mostrarColores(combinacionGanadora);
-
-	}
+	
 
 }

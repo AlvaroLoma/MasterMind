@@ -7,24 +7,32 @@ import tecladoGenerico.TecladoGenerico.Numero;
 import tecladoGenerico.TecladoGenerico.Rango;
 
 /**
- * @author Saladillo
+ * Clase que extiende a la clase jugador y posee la informacion necesaria para el usuario
+ * @author Alvaro Lodeiro
  *
  */
 public class Usuario extends Jugador {
 	
 	
-	
+	/**
+	 * Modo del juego
+	 */
 	protected ModoJuego modo;
 	
 	/**
-	 * @param modo
+	 * Crea un nuevo jugador usuario
+	 * @param modo carga la configuracion del modo de juego
 	 */
 	public Usuario(ModoJuego modo) {
 		super(crearCombinacionGanadora(modo),modo);
 		this.modo=modo;
 		
 	}
-
+	/**
+	 * Crea una combinacion ganadora
+	 * @param modo configuracion de la partida
+	 * @return una combinacion que sera cargada como la combinacion Ganadora
+	 */
 	private static  Combinacion[] crearCombinacionGanadora(ModoJuego modo) {
 		Combinacion combinacion[]= new Combinacion[modo.getNumCasillas()];
 		HashMap<String,Boolean> conjunto=new HashMap <String,Boolean>();
@@ -51,6 +59,9 @@ public class Usuario extends Jugador {
 		return combinacion ;	
 	}
 	
+	/**
+	 * Solicita al usuario que introduzca un nuevo intento por teclado
+	 */
 	
 	public Combinacion[] nuevoIntento() {
 		Combinacion nuevoIntento[]= new Combinacion[modo.getNumCasillas()];

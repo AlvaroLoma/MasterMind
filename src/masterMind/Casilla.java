@@ -1,31 +1,34 @@
 package masterMind;
 
 /**
- * @author Saladillo
+ * La clase casilla es la que almacena la informacion sobre los colores
+ * @author Alvaro Lodeiro
  *
  */
 public class Casilla {
-
-	Colores color;
+	/**
+	 * Atributo clase colores, guarda la informacion del color en la casilla
+	 */
+	private Colores color;
 
 	/**
-	 * @param color2
+	 * @param color2 numero entero para crear el color
 	 */
 	public Casilla(int color2) {
 		color = new Colores(color2);
 	}
 
 	/**
-	 * @return
+	 * @return llama a la funcion dibujarColor() en la clase color
 	 */
 	public String dibujar() {
 		
-		return color.dibujarColor();
+		return color.getColor();
 	}
 
 	/**
-	 * @param combinacion
-	 * @return
+	 * @param combinacion Array de combinaciones que se va a comprobar
+	 * @return resultado de la comprobacion
 	 */
 	public boolean equals(Casilla combinacion) {
 
@@ -34,7 +37,7 @@ public class Casilla {
 	}
 
 	/**
-	 * @return
+	 * @return cadena del color
 	 */
 	public String getColor() {
 
@@ -42,7 +45,7 @@ public class Casilla {
 	}
 
 	/**
-	 * @param value
+	 * @param value valor para cambia el color
 	 */
 	public void setColor(String value) {
 		color.setColores(value);
@@ -50,7 +53,7 @@ public class Casilla {
 	}
 
 	/**
-	 * @return
+	 * @return devuelve el numero del color
 	 */
 	public int getNumero() {
 
