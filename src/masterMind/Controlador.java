@@ -6,20 +6,23 @@ import tecladoGenerico.TecladoGenerico;
  *La clase controlador sera utilizada para implementar un main dinamico.
  *La clase controlador controla toda la informacion sobre la partida, los jugadores y el modo de juego 
  *@author Alvaro Lodeiro
- *
+
  *	
  */
 public class Controlador {
+	//Atributos necesarios para el objeto controlador, estos son una partida, dos jugadores y el modo que nos dara
+	//toda la informacion que necesitamos
 	/**
 	 * Atributo clase partida, necesario para el desarrollo de la partida
 	 */
-	//Atributos necesarios para el objeto controlador, estos son una partida, dos jugadores y el modo que nos dara
-	//toda la informacion que necesitamos
+	
 	private Partida partida;
+
 	/**
 	 * Atributo clase Jugador, necesario para el control de jugador 1
-	 */
+	 * */
 	private Jugador jugador1;
+	
 	/**
 	 * Atributo clase Jugador, necesario para el control de jugador 2
 	 */
@@ -27,10 +30,15 @@ public class Controlador {
 	/**
 	 * Atributo clase ModoJuego, necesario para cargar las normas del modo de juego
 	 */
+	
+	
 	private ModoJuego modo;
 	
 	/**
 	 * Contruye el objeto controlador que inicializara el resto de objetos necesarios del juego
+	 * @see #pantallaInicio()
+	 * @see #menuModoJuego()
+	 * @see #crearJugadores()
 	 */
 	/*
 	 * 1º Crea objetos de tipo controlador, este metodo inicializa todo lo necesario con la ayuda del usuario
@@ -39,6 +47,8 @@ public class Controlador {
 	 * 4º Crea la partida con el modo de juego
 	 * 5º Carga los jugadores con la ayuda del usuario
 	 * */
+	
+	@SuppressWarnings("javadoc")
 	public Controlador() {
 		pantallaInicio();	
 		menuModoJuego();		
@@ -51,6 +61,7 @@ public class Controlador {
 		 * de jugadores necesarios para empezar la partida
 		 * 
 		 * Dependiendo del modo de juego seleccionado cargaremos 1 o 2 jugadores
+		 * 
 		 */
 	/*
 	 * 1º Comprobamos cual es el modo de juego seleccionado por el usuario
@@ -218,6 +229,7 @@ public class Controlador {
 
 	/**
 	 * Metodo que desarrolla el juego en modo facil
+	 * 
 	 */
 	/*
 	 * 1º Comprobaremos cual de los dos jugadores esta jugando
