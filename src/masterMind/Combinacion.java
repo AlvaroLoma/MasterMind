@@ -1,5 +1,6 @@
 package masterMind;
 
+
 /**
  * Clase encargada de gestionar y crear las combinaciones
  * @author Alvaro Lodeiro
