@@ -2,6 +2,7 @@ package masterMind;
 
 /**
  * La clase casilla es la que almacena la informacion sobre los colores
+ * 
  * @author Alvaro Lodeiro
  *
  */
@@ -12,7 +13,8 @@ public class Casilla {
 	private Colores color;
 
 	/**
-	 * @param color2 numero entero para crear el color
+	 * @param color2
+	 *            numero entero para crear el color
 	 */
 	public Casilla(int color2) {
 		color = new Colores(color2);
@@ -22,12 +24,13 @@ public class Casilla {
 	 * @return llama a la funcion dibujarColor() en la clase color
 	 */
 	public String dibujar() {
-		
+
 		return color.getColor();
 	}
 
 	/**
-	 * @param combinacion Array de combinaciones que se va a comprobar
+	 * @param combinacion
+	 *            Array de combinaciones que se va a comprobar
 	 * @return resultado de la comprobacion
 	 */
 	public boolean equals(Casilla combinacion) {
@@ -45,7 +48,8 @@ public class Casilla {
 	}
 
 	/**
-	 * @param value valor para cambia el color
+	 * @param value
+	 *            valor para cambia el color
 	 */
 	public void setColor(String value) {
 		color.setColores(value);

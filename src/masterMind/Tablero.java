@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 /**
  * Clase tablero carga los intentos y sus comprobaciones y dibuja los tableros
+ * 
  * @author Alvaro Lodeiro
  *
  */
@@ -24,7 +25,9 @@ public class Tablero implements Dibujar {
 
 	/**
 	 * Crea un tablero
-	 * @param modo con la configuracion de la partida
+	 * 
+	 * @param modo
+	 *            con la configuracion de la partida
 	 */
 	public Tablero(ModoJuego modo) {
 		tableroPartida = new Combinacion[modo.getIntentos()][modo.getNumCasillas()];
@@ -32,7 +35,9 @@ public class Tablero implements Dibujar {
 
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see masterMind.Dibujar#dibujarTablero()
 	 */
 	@Override
@@ -79,7 +84,9 @@ public class Tablero implements Dibujar {
 
 	/**
 	 * Carga un nuevo intento en el tablero
-	 * @param nuevoIntento nuevo intento a cargar
+	 * 
+	 * @param nuevoIntento
+	 *            nuevo intento a cargar
 	 */
 	public void nuevoIntento(Combinacion[] nuevoIntento) {
 
@@ -92,7 +99,9 @@ public class Tablero implements Dibujar {
 
 	/**
 	 * Carga una comprobacion en el tablero
-	 * @param arrayList nueva comprobacion a cargar
+	 * 
+	 * @param arrayList
+	 *            nueva comprobacion a cargar
 	 */
 	public void comprobacion(ArrayList<String> arrayList) {
 		Iterator<String> it = arrayList.iterator();
@@ -122,6 +131,7 @@ public class Tablero implements Dibujar {
 	/**
 	 * 
 	 * Comprueba si el jugador ha ganado la partida
+	 * 
 	 * @return Devuelve si el jugador ha ganado o no la partida
 	 */
 	public boolean buscarGanador() {
@@ -143,8 +153,11 @@ public class Tablero implements Dibujar {
 	}
 
 	/**
-	 * Comprueba si el numero de intentos de la partida actual es mayor o no del numero de intento
-	 * @param intentos numero de intentos actuales de la partida
+	 * Comprueba si el numero de intentos de la partida actual es mayor o no del
+	 * numero de intento
+	 * 
+	 * @param intentos
+	 *            numero de intentos actuales de la partida
 	 * @return si el numero de intento actual es menor o no que el numero de intento
 	 */
 	public boolean quedanIntentos(int intentos) {
@@ -154,8 +167,11 @@ public class Tablero implements Dibujar {
 
 	/**
 	 * Metodo que se encarga de dibujar ambos tableros
-	 * @param tablero1 tablero del jugador 1
-	 * @param tablero2 tablero del jugador 2
+	 * 
+	 * @param tablero1
+	 *            tablero del jugador 1
+	 * @param tablero2
+	 *            tablero del jugador 2
 	 */
 	@Override
 	public void dibujarTableros(Tablero tablero1, Tablero tablero2) {
@@ -233,6 +249,7 @@ public class Tablero implements Dibujar {
 
 	/**
 	 * Calcula el numero de aciertos de un jugador para determinar los empates
+	 * 
 	 * @return el numero de aciertos que tiene el jugador
 	 */
 	public int numeroAciertos() {

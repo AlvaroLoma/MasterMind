@@ -2,6 +2,7 @@ package masterMind;
 
 /**
  * Clase Colores, posee la informacion de los colores
+ * 
  * @author Alvaro Lodeiro
  *
  */
@@ -72,7 +73,6 @@ public class Colores {
 	 */
 	public static final String FONDO_ROJO = "\u001B[101m";
 
-
 	/**
 	 * Atributo de numero entero utilizado para identificar al color
 	 */
@@ -84,7 +84,9 @@ public class Colores {
 
 	/**
 	 * Metodo que crea los colores
-	 * @param color entero utilizado para identificar el color y crear su cadena
+	 * 
+	 * @param color
+	 *            entero utilizado para identificar el color y crear su cadena
 	 */
 	public Colores(int color) {
 
@@ -136,7 +138,9 @@ public class Colores {
 
 	/**
 	 * Metodo que muestra todos los colores disponibles segun el modo de juego
-	 * @param modo determina el numero de colores que mostraremos
+	 * 
+	 * @param modo
+	 *            determina el numero de colores que mostraremos
 	 */
 	public static void mostrarColores(ModoJuego modo) {
 
@@ -148,20 +152,20 @@ public class Colores {
 		System.out.print(Colores.FONDO_BURDEO + " 6 " + Colores.RESET + " ");
 		System.out.print(Colores.FONDO_GRIS + " 7 " + Colores.RESET + " ");
 		System.out.print(Colores.FONDO_AZUL + Colores.BLANCO + " 8 " + Colores.RESET + " ");
-		if(modo==ModoJuego.DIFICIL) {
+		if (modo == ModoJuego.DIFICIL) {
 			System.out.print(Colores.FONDO_MOSTAZA + Colores.BLANCO + " 9 " + Colores.RESET + " ");
 			System.out.print(Colores.FONDO_ROJO + Colores.BLANCO + " 10 " + Colores.RESET + " ");
 		}
-		
+
 		System.out.println();
 
 	}
 
-
-
 	/**
 	 * Metodo equals que compara los numeros de las combinaciones
-	 * @param combinacion a comprobar si es o no iguala la que llama a la funcion
+	 * 
+	 * @param combinacion
+	 *            a comprobar si es o no iguala la que llama a la funcion
 	 * @return si son iguales o no
 	 */
 	public boolean equals(Colores combinacion) {
@@ -172,6 +176,7 @@ public class Colores {
 
 	/**
 	 * Metodo que crea una cadena con un color
+	 * 
 	 * @return una cadena ya creada con el color seleccionado
 	 */
 	public String getColor() {
@@ -181,7 +186,9 @@ public class Colores {
 
 	/**
 	 * Cambia el valor del parametro colores
-	 * @param value valor a cambiar en el parametro colores
+	 * 
+	 * @param value
+	 *            valor a cambiar en el parametro colores
 	 */
 	public void setColores(String value) {
 		colores = value;
@@ -190,6 +197,7 @@ public class Colores {
 
 	/**
 	 * Obtiene el numero del color
+	 * 
 	 * @return el numero del color
 	 */
 	public int getNumero() {
@@ -199,7 +207,9 @@ public class Colores {
 
 	/**
 	 * Muestra un array de combinciones por pantalla
-	 * @param combinacionGanadora que contendra la combinacion que se mostrara por pantalla
+	 * 
+	 * @param combinacionGanadora
+	 *            que contendra la combinacion que se mostrara por pantalla
 	 */
 	public static void mostrarColores(Combinacion[] combinacionGanadora) {
 
