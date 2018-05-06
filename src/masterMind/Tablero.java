@@ -8,7 +8,7 @@ import java.util.Iterator;
  * @author Alvaro Lodeiro
  *
  */
-public class Tablero {
+public class Tablero implements Dibujar {
 	/**
 	 * Array de doble dimension que almacen las comprobaciones
 	 */
@@ -32,9 +32,10 @@ public class Tablero {
 
 	}
 
-	/**
-	 * Dibuja un tablero simple
+	/* (non-Javadoc)
+	 * @see masterMind.Dibujar#dibujarTablero()
 	 */
+	@Override
 	public void dibujarTablero() {
 		boolean salir = false;
 		int intentos = 0;
@@ -152,10 +153,11 @@ public class Tablero {
 	}
 
 	/**
-	 * Recibe dos tableros y los dibuja por pantalla
-	 * @param tablero1 tablero a dibujar
-	 * @param tablero2 tablero a dibujar
+	 * Metodo que se encarga de dibujar ambos tableros
+	 * @param tablero1 tablero del jugador 1
+	 * @param tablero2 tablero del jugador 2
 	 */
+	@Override
 	public void dibujarTableros(Tablero tablero1, Tablero tablero2) {
 		boolean salir = false;
 		String separacionV = "          ";
