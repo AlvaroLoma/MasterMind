@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Clase abstracta Jugador, encargado de controlar la herencia de los jugadores y de almacenar informacion comun de todos los jugadores
+ * Clase abstracta Jugador, encargado de controlar la herencia de los jugadores
+ * y de almacenar informacion comun de todos los jugadores
+ * 
  * @author Alvaro Lodeiro
  *
  */
@@ -23,20 +25,25 @@ public abstract class Jugador {
 	protected ModoJuego modo;
 
 	/**
-	 * @param combinacion Combinacion ganadora que sera almacenada en el atributo combinacionGanadora
-	 * @param modo carga el modo de juego 
+	 * @param combinacion
+	 *            Combinacion ganadora que sera almacenada en el atributo
+	 *            combinacionGanadora
+	 * @param modo
+	 *            carga el modo de juego
 	 */
 	public Jugador(Combinacion[] combinacion, ModoJuego modo) {
 		this.modo = modo;
 		combinacionGanadora = new Combinacion[combinacion.length];
 		cargarCombinacion(combinacion);
 		combinaciones = new Combinacion[combinacion.length];
-		
 
 	}
+
 	/**
 	 * Carga una combinacion como combinacion Ganadora
-	 * @param combinacion Que sera cargada en el atributo combinacionGanadora
+	 * 
+	 * @param combinacion
+	 *            Que sera cargada en el atributo combinacionGanadora
 	 */
 	private void cargarCombinacion(Combinacion[] combinacion) {
 
@@ -49,6 +56,7 @@ public abstract class Jugador {
 
 	/**
 	 * Comprueba la ultima jugada del jugador y crea una lista con la comprobacion
+	 * 
 	 * @return una lista con la comprobacion de una jugada
 	 */
 	public ArrayList<String> comprobacion() {
@@ -56,7 +64,7 @@ public abstract class Jugador {
 		ArrayList<String> lista = new ArrayList<String>();
 		String rojo = Colores.ROJO + "*" + Colores.RESET;
 		String negro = Colores.NEGRO + "*" + Colores.RESET;
-		boolean remplazar=false;
+		boolean remplazar = false;
 		boolean salir = false;
 		int acierto = 0;
 		int uno = 0;
@@ -69,31 +77,31 @@ public abstract class Jugador {
 				if (!conjunto.containsKey(combinaciones[uno].getCasilla())) {
 
 					if (uno == dos) {
-						
+
 						conjunto.put(combinaciones[uno].getCasilla(), rojo);
-						remplazar=true;
+						remplazar = true;
 
 					} else {
-					
+
 						conjunto.put(combinaciones[uno].getCasilla(), negro);
 					}
 
 				} else {
 
 					if (uno == dos) {
-					
+
 						conjunto.remove(combinaciones[uno].getCasilla());
-						
+
 						conjunto.put(combinaciones[uno].getCasilla(), rojo);
-						remplazar=true;
+						remplazar = true;
 
 					} else {
-						if(!remplazar) {
-							
+						if (!remplazar) {
+
 							conjunto.put(combinaciones[uno].getCasilla(), negro);
-							remplazar=true;
+							remplazar = true;
 						}
-						
+
 					}
 				}
 				uno++;
@@ -121,8 +129,5 @@ public abstract class Jugador {
 	}
 
 	abstract protected Combinacion[] nuevoIntento();
-
-
-	
 
 }

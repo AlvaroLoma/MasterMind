@@ -3,7 +3,9 @@ package masterMind;
 import java.util.ArrayList;
 
 /**
- * Clase partida controla la partida del juego, los intentos y las comprobaciones asi como los tableros
+ * Clase partida controla la partida del juego, los intentos y las
+ * comprobaciones asi como los tableros
+ * 
  * @author Alvaro Lodeiro
  *
  */
@@ -17,13 +19,15 @@ public class Partida {
 	 */
 	protected Tablero tablero2;
 	/**
-	 * Modo de juego 
+	 * Modo de juego
 	 */
 	private ModoJuego modo;
 
 	/**
 	 * Crea una nueva partida
-	 * @param modo de juego
+	 * 
+	 * @param modo
+	 *            de juego
 	 */
 	public Partida(ModoJuego modo) {
 		this.modo = modo;
@@ -34,7 +38,9 @@ public class Partida {
 
 	/**
 	 * Carga una comprobacion en un tablero
-	 * @param comprobarCombinacion comprobacion para cargar en el tablero
+	 * 
+	 * @param comprobarCombinacion
+	 *            comprobacion para cargar en el tablero
 	 */
 	public void comprobacion(ArrayList<String> comprobarCombinacion) {
 		tablero.comprobacion(comprobarCombinacion);
@@ -43,7 +49,8 @@ public class Partida {
 
 	/**
 	 * Busca si el jugador 1 ha ganado la partida
-	 * @return devuelve si el tablero  ha completado la partida
+	 * 
+	 * @return devuelve si el tablero ha completado la partida
 	 */
 	public boolean buscarGanador() {
 		return tablero.buscarGanador();
@@ -59,6 +66,7 @@ public class Partida {
 
 	/**
 	 * Comprueba si quedan intentos
+	 * 
 	 * @return si quedan o no intentos
 	 */
 	public boolean quedanIntentos() {
@@ -68,7 +76,9 @@ public class Partida {
 
 	/**
 	 * Carga una comprobacion en el tablero
-	 * @param comprobarCombinacion comprobacion a cargar en el tablero
+	 * 
+	 * @param comprobarCombinacion
+	 *            comprobacion a cargar en el tablero
 	 */
 	public void comprobacionM(ArrayList<String> comprobarCombinacion) {
 
@@ -86,6 +96,7 @@ public class Partida {
 
 	/**
 	 * Comprueba que jugador ha tenido mas aciertos en un empate
+	 * 
 	 * @return el jugador que ha obtenido mas aciertos
 	 */
 	public int empate() {
@@ -106,11 +117,13 @@ public class Partida {
 		return ganador;
 	}
 
-	
 	/**
 	 * Carga un nuevo intento y su comprobacion en el tablero 1
-	 * @param nuevoIntento nuevo intento del usuario
-	 * @param comprobacion nueva comprobacion del usuario
+	 * 
+	 * @param nuevoIntento
+	 *            nuevo intento del usuario
+	 * @param comprobacion
+	 *            nueva comprobacion del usuario
 	 */
 	@SuppressWarnings("unchecked")
 	public void intentoUsuario(Combinacion[] nuevoIntento, Object comprobacion) {
@@ -118,11 +131,13 @@ public class Partida {
 		tablero.comprobacion((ArrayList<String>) comprobacion);
 	}
 
-	
 	/**
 	 * Carga un nuevo intento y su comprobacion en el tablero 2
-	 * @param intentoIA nuevo intento de la maquina
-	 * @param comprobacion nueva comprobacion de la maquina
+	 * 
+	 * @param intentoIA
+	 *            nuevo intento de la maquina
+	 * @param comprobacion
+	 *            nueva comprobacion de la maquina
 	 */
 	@SuppressWarnings("unchecked")
 	public void intentoMaquina(Combinacion[] intentoIA, Object comprobacion) {
@@ -146,6 +161,7 @@ public class Partida {
 
 	/**
 	 * Comprueba si el usuario ha ganado la partida
+	 * 
 	 * @return si el usuario ha ganado o no la partida
 	 */
 	public boolean UsuarioGanador() {
@@ -154,6 +170,7 @@ public class Partida {
 
 	/**
 	 * Comprueba si la maquina ha ganado la partida
+	 * 
 	 * @return si la maquina ha ganado o no la partida
 	 */
 	public boolean MaquinaGanador() {
@@ -162,8 +179,11 @@ public class Partida {
 
 	/**
 	 * Carga ambos intentos de las dos IA en sus tableros
-	 * @param nuevoIntento de la IA en el jugador 1
-	 * @param nuevoIntento2 de la IA en el jugador 2
+	 * 
+	 * @param nuevoIntento
+	 *            de la IA en el jugador 1
+	 * @param nuevoIntento2
+	 *            de la IA en el jugador 2
 	 */
 	public void IA(Combinacion[] nuevoIntento, Combinacion[] nuevoIntento2) {
 		tablero.nuevoIntento(nuevoIntento);

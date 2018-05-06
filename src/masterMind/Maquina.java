@@ -10,13 +10,16 @@ import tecladoGenerico.TecladoGenerico.Numero;
 import tecladoGenerico.TecladoGenerico.Rango;
 
 /**
- * Clase maquina, que extiende a la clase jugador, llevara a cabo las funciones de la maquina y de la IA
+ * Clase maquina, que extiende a la clase jugador, llevara a cabo las funciones
+ * de la maquina y de la IA
+ * 
  * @author Alvaro Lodeiro
  *
  */
 public class Maquina extends Jugador {
 	/**
-	 * Atributo que indica el momento en el que se encontraron todos los colores y empieza a buscar las posiciones
+	 * Atributo que indica el momento en el que se encontraron todos los colores y
+	 * empieza a buscar las posiciones
 	 */
 	private boolean buscarPosiciones;
 	/**
@@ -36,7 +39,8 @@ public class Maquina extends Jugador {
 	 */
 	private int numeroColor;
 	/**
-	 * Atributo que almacena un color que no esta en la combinacion y que sera utilizado para encontrar las posiciones
+	 * Atributo que almacena un color que no esta en la combinacion y que sera
+	 * utilizado para encontrar las posiciones
 	 */
 	private Colores noEsta;
 	/**
@@ -49,8 +53,10 @@ public class Maquina extends Jugador {
 	private HashSet<Integer> listaColores = new HashSet<>();
 
 	/**
-	 * Contruye un jugador de tipo maquina 
-	 * @param modo que indica las normas del juego
+	 * Contruye un jugador de tipo maquina
+	 * 
+	 * @param modo
+	 *            que indica las normas del juego
 	 */
 	public Maquina(ModoJuego modo) {
 		super(crearCombinacionGanadora(modo), modo);
@@ -60,9 +66,13 @@ public class Maquina extends Jugador {
 		intentoFinal = new Combinacion[modo.getNumCasillas()];
 
 	}
+
 	/**
-	 * Metodo que creara una combinacion ganadora dependiendo del modo de juego que se haya seleccionado
-	 * @param modo indica el modo de juego seleccionado
+	 * Metodo que creara una combinacion ganadora dependiendo del modo de juego que
+	 * se haya seleccionado
+	 * 
+	 * @param modo
+	 *            indica el modo de juego seleccionado
 	 * @return un array de combinaciones que sera usada como la combinacion Ganadora
 	 */
 	private static Combinacion[] crearCombinacionGanadora(ModoJuego modo) {
@@ -114,12 +124,15 @@ public class Maquina extends Jugador {
 	}
 
 	/**
-	 * Comprueba si la combinacion que llama al metodo coincide con la combinacion Ganadora y crea una respuesta
-	 * @return un lista con la comprobacion del array de combinaciones que llamase al metodo
+	 * Comprueba si la combinacion que llama al metodo coincide con la combinacion
+	 * Ganadora y crea una respuesta
+	 * 
+	 * @return un lista con la comprobacion del array de combinaciones que llamase
+	 *         al metodo
 	 */
 	public ArrayList<String> comprobacionM() {
 		int numero = 0;
-		boolean comprobacion=false;
+		boolean comprobacion = false;
 		ArrayList<String> lista = new ArrayList<String>();
 		ArrayList<String> listaComprobacion = new ArrayList<String>();
 		boolean salir = false;
@@ -142,36 +155,40 @@ public class Maquina extends Jugador {
 			}
 		} while (!salir);
 
-		
-		listaComprobacion=comprobacion();
-		
-		if(lista.size()==listaComprobacion.size()) {
-			Iterator <String> it = listaComprobacion.iterator();
+		listaComprobacion = comprobacion();
+
+		if (lista.size() == listaComprobacion.size()) {
+			Iterator<String> it = listaComprobacion.iterator();
 			do {
-				if(it.hasNext()) {
-					
-					if(!lista.contains(it.next())) {
-						System.out.println("Error. La comprobacion introducida es erronea, cargando la comprobacion autentica");
+				if (it.hasNext()) {
+
+					if (!lista.contains(it.next())) {
+						System.out.println(
+								"Error. La comprobacion introducida es erronea, cargando la comprobacion autentica");
 						lista.clear();
 						lista.addAll(listaComprobacion);
 					}
-				}else {
-					comprobacion=true;
+				} else {
+					comprobacion = true;
 				}
-				
-			}while(!comprobacion);
-			
-		}else {
+
+			} while (!comprobacion);
+
+		} else {
 			System.out.println("Error. La comprobacion introducida es erronea, cargando la comprobacion autentica");
 			lista.clear();
 			lista.addAll(listaComprobacion);
 		}
-		
+
 		return lista;
 	}
+
 	/**
-	 * Metodo que desarrolla los intentos del jugador creado un nuevo array de combinaciones
-	 * @return un array de combinaciones con el nuevo intento que el jugador ha calculado
+	 * Metodo que desarrolla los intentos del jugador creado un nuevo array de
+	 * combinaciones
+	 * 
+	 * @return un array de combinaciones con el nuevo intento que el jugador ha
+	 *         calculado
 	 */
 	protected Combinacion[] nuevoIntento() {
 		int numero = 0;
@@ -260,8 +277,11 @@ public class Maquina extends Jugador {
 
 		return combinacion;
 	}
+
 	/**
-	 * Metodo que busca las posibles posiciones de un array de combinaciones respecto con la combinacion Ganadora
+	 * Metodo que busca las posibles posiciones de un array de combinaciones
+	 * respecto con la combinacion Ganadora
+	 * 
 	 * @return un array de combinaciones con un nuevo intento
 	 */
 	private Combinacion[] buscarPosiciones() {
@@ -310,10 +330,12 @@ public class Maquina extends Jugador {
 		}
 		return combinacion;
 	}
-		/**
-		 * Metodo que crea una lista con la comprobacion del ultimo intento del jugador
-		 * @return una lista con la comprobacion
-		 */
+
+	/**
+	 * Metodo que crea una lista con la comprobacion del ultimo intento del jugador
+	 * 
+	 * @return una lista con la comprobacion
+	 */
 	public ArrayList<String> comprobacion() {
 
 		HashMap<Integer, String> conjuntoColores = new HashMap<Integer, String>();
