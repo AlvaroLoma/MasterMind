@@ -17,7 +17,7 @@ public class Tablero implements Dibujar {
 	/**
 	 * Array de doble dimension que almacena los intentos
 	 */
-	private Combinacion tableroPartida[][];
+	protected Combinacion tableroPartida[][];
 	/**
 	 * Atributo estatico que controla los intentos de ambos tableros
 	 */
@@ -34,7 +34,7 @@ public class Tablero implements Dibujar {
 		comprobacion = new String[modo.getIntentos()][modo.getNumCasillas()];
 
 	}
-
+	
 	/*
 	 * (non-Javadoc)
 	 * 

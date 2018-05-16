@@ -3,6 +3,8 @@ package masterMind;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
+
 /**
  * Clase abstracta Jugador, encargado de controlar la herencia de los jugadores
  * y de almacenar informacion comun de todos los jugadores
@@ -129,5 +131,7 @@ public abstract class Jugador {
 	}
 
 	abstract protected Combinacion[] nuevoIntento();
+
+	abstract String respuesta();
 
 }
