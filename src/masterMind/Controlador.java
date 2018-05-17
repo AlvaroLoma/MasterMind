@@ -31,7 +31,8 @@ public class Controlador extends Jugadores {
 	/**
 	 * Atributo clase partida, necesario para el desarrollo de la partida
 	 */
-
+	private static boolean principio=false;
+	private int ganador;
 	private Partida partida;
 
 	/**
@@ -48,7 +49,7 @@ public class Controlador extends Jugadores {
 	 */
 
 	private ModoJuego modo;
-	Writer fichero = null;
+	 static Writer fichero = null;
 
 	/**
 	 * Contruye el objeto controlador que inicializara el resto de objetos
@@ -71,7 +72,10 @@ public class Controlador extends Jugadores {
 		menuModoJuego();
 		partida = new Partida(modo);
 		try {
-			fichero= new BufferedWriter(new OutputStreamWriter(new FileOutputStream("fichero_escritura2.html"), "UTF-8"));
+			if(!principio) {
+			fichero= new BufferedWriter(new OutputStreamWriter(new FileOutputStream("fichero_escritura2.html"), "UTF-8"));	
+			}
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -119,6 +123,7 @@ public class Controlador extends Jugadores {
 			jugador1 = new Maquina(modo);
 			jugador2 = new Maquina(modo);
 			jugarModoDIficil(); // Metodo para jugar la partida en modo dficil
+			Tablero.intento=0;
 		}
 
 	}
@@ -149,30 +154,52 @@ public class Controlador extends Jugadores {
 			partida.dibujarTableroDoble();
 
 			try { // Hace que el juego espere medio segundo entre turno y turno
-				Thread.sleep(500);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				System.out.println("Thread Interrupted");
 			}
 			if (partida.UsuarioGanador()) {
 				System.out.println("El jugador 1 es el ganador!!!!");
 				Colores.mostrarColores(jugador1.combinacionGanadora);
+				ganador=1;
 				salir = true;
 			} else if (partida.MaquinaGanador()) {
 				System.out.println("El jugador 2 es el ganador!!!!");
 				Colores.mostrarColores(jugador2.combinacionGanadora);
+				ganador=2;
 				salir = true;
 			}
 		
 			partida.aumentarIntento();
 		} while (!salir);
+		if(!principio) {
+			primeraParte();
+			principio=true;
+		}
+		documentoConcurso();
+		
+
+	}
+
+	private void primeraParte() {
 		try {
 			fichero.write("<html lang=\"en\" dir=\"ltr\">\n" + 
 					"  <head>\n" + 
-					"    <style type=\"text/css\">\n" + 
-					"    p{\n" + 
+					"    <style type=\"text/css\">\n" +  
+					"    span{\n" + 
 					"      display: inline;\n" + 
-					
-					"    }\n" + 
+					"    }\n" + 	
+					"      div{\n" + 
+					"        border: black 1px solid;\n" +
+					"		width: 25%;"+	
+					"		padding-top:2%;"+
+					"		padding-left:2%;"+
+					"		padding-right:10px;"+
+					"		padding-bottom:2%;"+
+					"		float:left;"+
+					"		background-color:#663300;"+
+					"       \n" + 
+					"      }\n" +
 					"      .rojo{\n" + 
 					"        color: red;\n" + 
 					"        background-color: red;\n" + 
@@ -217,91 +244,146 @@ public class Controlador extends Jugadores {
 					"      .negro{\n" + 
 					"        color: black;\n" + 
 					"      }\n" +
+					"      .ganador{\n" + 
+					"		background-color: #33ccff;"+
+					"        color: black;\n" + 
+					"		width: 53%;"+
+					"		text-align:center;"+
+					"      }\n" +
+					"      .contenedor{\n" + 
+					"		background-color:black;"+
+					" 		box-sizing: border-box;"+
+					"		padding-left:25%;"+
+					"		padding-right:%;"+
+					"        color: black;\n" + 
+					"		width: 100%;"+
+					"      }\n" +
 					"      .rojo2{\n" + 
-					"        color: red;\n" + 
+					"        color: white;\n" + 
 					"      }\n" +
 					"    </style>\n" + 
 					"    <meta charset=\"utf-8\">\n" + 
-					"    <title>Concurso MasterMind</title>\n" + 
+					"    <title>Concurso MasterMind</title>" + 
 					"  </head>\n" + 
-					"  <body>");
-			fichero.write("<h1>Nueva partida</h1>");
-			fichero.write("<p>Tablero del primer jugador<p><br/>");
-			for(int x=0;x<partida.tablero.intento;x++) {
-				fichero.write("<br/>");
-				for(int e=0;e<modo.getNumCasillas();e++) {
-				
-		switch (partida.tablero.tableroPartida[x][e].getNumero()){
-			
-		case 1:
-			fichero.write("<p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p>");
-			break;
-		case 2:
-			fichero.write("<p class='rosa'>&nbsp &nbsp</p><p>&nbsp</p>");
-			break;
-		case 3:
-			fichero.write("<p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p>");
-			break;
-		case 4:
-			fichero.write("<p class='morado'>&nbsp &nbsp</p><p>&nbsp</p>");
-			break;
-		case 5:
-			fichero.write("<p class='verde'>&nbsp &nbsp</p><p>&nbsp</p>");
-			break;
-		case 6:
-			fichero.write("<p class='burdeo'>&nbsp &nbsp</p><p>&nbsp</p>");
-			break;
-		case 7:
-			fichero.write("<p class='gris'>&nbsp &nbsp</p><p>&nbsp</p>");
-			break;
-		case 8:
-			fichero.write("<p class='azul'>&nbsp &nbsp</p><p>&nbsp</p>");
-			break;
-		case 9:
-			fichero.write("<p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p>");
-			break;
-		case 10:
-			fichero.write("<p class='rojo'>&nbsp &nbsp</p><p>&nbsp</p>");
-			break;
-		}
-			}
-				for(int f=0;f<modo.getNumCasillas();f++) {
-					if(partida.tablero.comprobacion[x][f]!=null) {
-						switch(partida.tablero.comprobacion[x][f]) {
-				case Colores.ROJO + "*" + Colores.RESET:
-					fichero.write("<p class='rojo2'>*</p>");
-					break;
-				case Colores.NEGRO + "*" + Colores.RESET:
-					fichero.write("<p class='negro'>*</p>");
-					break;
-				}
-					}
-				
-				}
-				
-			}
-		} catch (IOException e1) {
+					"  <body>\n"	+
+					"<h1>Nueva partida</h1>\n");
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			e.printStackTrace();
 		}
 		
-			
+	}
+
+	private void documentoConcurso() {
 		try {
+			fichero.write("<div class='contenedor'>");
+			fichero.write("<h1 class='rojo2'>Nueva ronda</h1>\n");
+			fichero.write("<div class='ganador'>\n");
+			fichero.write("<span class='ganador'>El ganador es: El jugador "+ganador+" </span>"+"<br/>");
+			fichero.write("</div>");
+			fichero.write("<br/>");
+			fichero.write("<br/>");
+			fichero.write("<br/>");
+			fichero.write("<br/>");
+			fichero.write("<div>\n");
+			fichero.write("<h4 class='rojo2'>Tablero del jugador 1</h4>\n");
+			escribirIntentos(partida.tablero);
+			fichero.write("</div>");
+			fichero.write("<div>\n");
+			fichero.write("<h4 class='rojo2'>Tablero Jugador 2</h4>");
+			escribirIntentos(partida.tablero2);
+			fichero.write("</div>");
+			fichero.write("</div>");
+			fichero.write("<br/>");
+			
 			fichero.write("<br/>  </body>"
-					+ " </html>");
+					+ " </html>");	
+			
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		
 		
+	}
+
+	private void escribirComprobacion(int a, Tablero tablero) {
+		for (int x = a; x < a+1; x++) {
+			for (int f = 0; f < modo.getNumCasillas(); f++) {
+				try {
+					if (tablero.comprobacion[x][f] != null) {
+						switch (tablero.comprobacion[x][f]) {
+						case Colores.ROJO + "*" + Colores.RESET:
+							fichero.write("<span class='rojo2'>*</span>");
+							break;
+						case Colores.NEGRO + "*" + Colores.RESET:
+							fichero.write("<span class='negro'>*</span>");
+							break;
+						}
+					}
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+		}
 		try {
-			fichero.close();
+			fichero.write("<br/>");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
+	}
+
+	private void escribirIntentos( Tablero tablero) {
+		for (int x = 0; x < tablero.intento; x++) {
+
+			for (int e = 0; e < modo.getNumCasillas(); e++) {
+
+				try {
+					switch (tablero.tableroPartida[x][e].getNumero()) {
+
+					case 1:
+						fichero.write("<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 2:
+						fichero.write("<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 3:
+						fichero.write("<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 4:
+						fichero.write("<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 5:
+						fichero.write("<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 6:
+						fichero.write("<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 7:
+						fichero.write("<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 8:
+						fichero.write("<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 9:
+						fichero.write("<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 10:
+						fichero.write("<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					}
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+			escribirComprobacion(x,tablero);
+		}
+		
 	}
 
 	/**
