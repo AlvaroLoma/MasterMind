@@ -1,9 +1,19 @@
 <html lang="en" dir="ltr">
   <head>
     <style type="text/css">
-    p{
+     span{
       display: inline;
     }
+      	  div{
+        border: black 1px solid;
+		width: 25%;
+		padding-top:2%;
+		padding-left:2%;
+		padding-right:15px;
+		padding-bottom:2%;
+		float:left;
+		background-color:#663300;       
+      }
       .rojo{
         color: red;
         background-color: red;
@@ -48,11 +58,2623 @@
       .negro{
         color: black;
       }
+      .ganador{
+		background-color: #33ccff;        color: black;
+		width: 53%;		text-align:center;      }
+      .contenedor{
+		background-color:black;
+ 		box-sizing: border-box;
+		padding-left:25%;
+        color: black;
+		width: 100%;      }
       .rojo2{
-        color: red;
+        color: white;
       }
     </style>
     <meta charset="utf-8">
-    <title>Concurso MasterMind</title>
-  </head>
-  <body><h1>Nueva partida</h1><p>Tablero del primer jugador<p><br/><br/><p class='gris'>&nbsp &nbsp</p><p>&nbsp</p><p class='gris'>&nbsp &nbsp</p><p>&nbsp</p><p class='gris'>&nbsp &nbsp</p><p>&nbsp</p><p class='gris'>&nbsp &nbsp</p><p>&nbsp</p><p class='gris'>&nbsp &nbsp</p><p>&nbsp</p><p class='gris'>&nbsp &nbsp</p><p>&nbsp</p><p class='gris'>&nbsp &nbsp</p><p>&nbsp</p><p class='gris'>&nbsp &nbsp</p><p>&nbsp</p><br/><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><br/><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><p class='rojo2'>*</p><p class='rojo2'>*</p><p class='rojo2'>*</p><br/><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='morado'>&nbsp &nbsp</p><p>&nbsp</p><p class='morado'>&nbsp &nbsp</p><p>&nbsp</p><p class='morado'>&nbsp &nbsp</p><p>&nbsp</p><p class='morado'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><br/><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='azul'>&nbsp &nbsp</p><p>&nbsp</p><p class='azul'>&nbsp &nbsp</p><p>&nbsp</p><p class='azul'>&nbsp &nbsp</p><p>&nbsp</p><p class='azul'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><br/><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='azul'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><br/><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='azul'>&nbsp &nbsp</p><p>&nbsp</p><p class='verde'>&nbsp &nbsp</p><p>&nbsp</p><p class='verde'>&nbsp &nbsp</p><p>&nbsp</p><p class='verde'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><br/><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='azul'>&nbsp &nbsp</p><p>&nbsp</p><p class='verde'>&nbsp &nbsp</p><p>&nbsp</p><p class='rosa'>&nbsp &nbsp</p><p>&nbsp</p><p class='rosa'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><p class='rojo2'>*</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='negro'>*</p><br/><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><p class='negro'>*</p><p class='negro'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='negro'>*</p><p class='negro'>*</p><p class='negro'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><p class='negro'>*</p><p class='negro'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><p class='negro'>*</p><p class='negro'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='azul'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='negro'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='azul'>&nbsp &nbsp</p><p>&nbsp</p><p class='negro'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='azul'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='negro'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='azul'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='verde'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='negro'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='verde'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='rosa'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><p class='negro'>*</p><br/><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='rosa'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='amarillo'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><p class='negro'>*</p><br/><p class='mostaza'>&nbsp &nbsp</p><p>&nbsp</p><p class='rosa'>&nbsp &nbsp</p><p>&nbsp</p><p class='verde'>&nbsp &nbsp</p><p>&nbsp</p><p class='azul'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='celeste'>&nbsp &nbsp</p><p>&nbsp</p><p class='rosa'>&nbsp &nbsp</p><p>&nbsp</p><p class='rojo2'>*</p><p class='rojo2'>*</p><p class='rojo2'>*</p><p class='rojo2'>*</p><p class='rojo2'>*</p><p class='rojo2'>*</p><p class='rojo2'>*</p><p class='rojo2'>*</p><br/>  </body> </html>
+    <title>Concurso MasterMind</title>  </head>
+  <body>
+<h1>Nueva partida</h1>
+<div class='contenedor'>
+<h1 class='rojo2'>Nueva ronda</h1>
+<div class='ganador'>
+<span class='ganador'>El ganador es: El jugador 2 </span>
+<br/>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<div>
+<h4 class='rojo2'>Tablero del jugador 1</h4>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+</div>
+<div>
+<h4 class='rojo2'>Tablero Jugador 2</h4>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><br/>
+</div>
+</div>
+<br/>
+<br/> 
+ </body>
+ </html><div class='contenedor'>
+<h1 class='rojo2'>Nueva ronda</h1>
+<div class='ganador'>
+<span class='ganador'>El ganador es: El jugador 2 </span>
+<br/>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<div>
+<h4 class='rojo2'>Tablero del jugador 1</h4>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<br/>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+</div>
+<div>
+<h4 class='rojo2'>Tablero Jugador 2</h4>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<br/>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><br/>
+</div>
+</div>
+<br/>
+<br/> 
+ </body>
+ </html><div class='contenedor'>
+<h1 class='rojo2'>Nueva ronda</h1>
+<div class='ganador'>
+<span class='ganador'>El ganador es: El jugador 1 </span>
+<br/>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<div>
+<h4 class='rojo2'>Tablero del jugador 1</h4>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><br/>
+</div>
+<div>
+<h4 class='rojo2'>Tablero Jugador 2</h4>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+</div>
+</div>
+<br/>
+<br/> 
+ </body>
+ </html><div class='contenedor'>
+<h1 class='rojo2'>Nueva ronda</h1>
+<div class='ganador'>
+<span class='ganador'>El ganador es: El jugador 2 </span>
+<br/>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<div>
+<h4 class='rojo2'>Tablero del jugador 1</h4>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<br/>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+</div>
+<div>
+<h4 class='rojo2'>Tablero Jugador 2</h4>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><br/>
+</div>
+</div>
+<br/>
+<br/> 
+ </body>
+ </html><div class='contenedor'>
+<h1 class='rojo2'>Nueva ronda</h1>
+<div class='ganador'>
+<span class='ganador'>El ganador es: El jugador 2 </span>
+<br/>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<div>
+<h4 class='rojo2'>Tablero del jugador 1</h4>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+</div>
+<div>
+<h4 class='rojo2'>Tablero Jugador 2</h4>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<br/>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>
+<br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='negro'>*</span><br/>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><br/>
+<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>
+<span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><span class='rojo2'>*</span><br/>
+</div>
+</div>
+<br/>
+<br/> 
+ </body>
+ </html>
