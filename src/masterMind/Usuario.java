@@ -83,4 +83,10 @@ public class Usuario extends Jugador {
 
 	}
 
+	@Override
+	String respuesta() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

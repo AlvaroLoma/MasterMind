@@ -14,35 +14,35 @@ class PruebasTest {
 	String rojo = Colores.ROJO + "*" + Colores.RESET;
 	String negro = Colores.NEGRO + "*" + Colores.RESET;
 
-	@Test
-	void comprobacionModoDIficilCorrecta() {
-		ModoJuego modo = ModoJuego.DIFICIL;
-		Jugador jugador1 = new Maquina(modo);
-		ArrayList<String> lista = new ArrayList();
-		for (int x = 0; x < modo.getNumCasillas(); x++) {
-			jugador1.combinacionGanadora[x] = new Combinacion(x);
-			jugador1.combinaciones[x] = new Combinacion(x);
-			lista.add(rojo);
-		}
-
-		Assert.assertEquals(lista, jugador1.comprobacion());
-
-	}
-
-	@Test
-	void comprobacionModoDificilIncorrecta() {
-		ModoJuego modo = ModoJuego.DIFICIL;
-		Jugador jugador1 = new Maquina(modo);
-		ArrayList<String> lista = new ArrayList();
-		for (int x = 0; x < modo.getNumCasillas(); x++) {
-			jugador1.combinacionGanadora[x] = new Combinacion(x);
-			jugador1.combinaciones[x] = new Combinacion(x + 1);
-			lista.add(rojo);
-		}
-		jugador1.combinacionGanadora[1] = new Combinacion(6);
-
-		Assert.assertNotEquals(lista, jugador1.comprobacion());
-	}
+//	@Test
+//	void comprobacionModoDIficilCorrecta() {
+//		ModoJuego modo = ModoJuego.DIFICIL;
+//		Jugador jugador1 = new Maquina(modo);
+//		ArrayList<String> lista = new ArrayList();
+//		for (int x = 0; x < modo.getNumCasillas(); x++) {
+//			jugador1.combinacionGanadora[x] = new Combinacion(x);
+//			jugador1.combinaciones[x] = new Combinacion(x);
+//			lista.add(rojo);
+//		}
+//
+//		Assert.assertEquals(lista, jugador1.comprobacion());
+//
+//	}
+//
+//	@Test
+//	void comprobacionModoDificilIncorrecta() {
+//		ModoJuego modo = ModoJuego.DIFICIL;
+//		Jugador jugador1 = new Maquina(modo);
+//		ArrayList<String> lista = new ArrayList();
+//		for (int x = 0; x < modo.getNumCasillas(); x++) {
+//			jugador1.combinacionGanadora[x] = new Combinacion(x);
+//			jugador1.combinaciones[x] = new Combinacion(x + 1);
+//			lista.add(rojo);
+//		}
+//		jugador1.combinacionGanadora[1] = new Combinacion(6);
+//
+//		Assert.assertNotEquals(lista, jugador1.comprobacion());
+//	}
 
 	@Test
 	void comprobacionModoMedioCorrecta() {

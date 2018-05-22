@@ -67,6 +67,15 @@ public class Maquina extends Jugador {
 
 	}
 
+	public Maquina() {
+		
+		super(crearCombinacionGanadora(ModoJuego.DIFICIL), ModoJuego.DIFICIL);
+		coloresEncontrados = false;
+		buscarPosiciones = false;
+		numeroColor = 0;
+		intentoFinal = new Combinacion[modo.getNumCasillas()];
+	}
+
 	/**
 	 * Metodo que creara una combinacion ganadora dependiendo del modo de juego que
 	 * se haya seleccionado
@@ -423,6 +432,12 @@ public class Maquina extends Jugador {
 
 		return listaf;
 
+	}
+
+	@Override
+	String respuesta() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
