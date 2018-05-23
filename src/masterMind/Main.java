@@ -10,21 +10,21 @@ public class Main {
 		do {
 		controlador=new Controlador();
 		salir++;
-<<<<<<< HEAD
+
 //		try {
 //			controlador.fichero.write("<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>");
 //		} catch (IOException e) {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-=======
+
 		try {
 			controlador.fichero.write("<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
->>>>>>> master
+
 		}while(salir<5);
 		try {
 			controlador.fichero.close();

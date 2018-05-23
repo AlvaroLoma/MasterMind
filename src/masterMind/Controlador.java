@@ -12,7 +12,6 @@ import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 import org.omg.Messaging.SyncScopeHelper;
 
-import concurso.Jugadores;
 import tecladoGenerico.TecladoGenerico;
 
 /**
@@ -24,7 +23,7 @@ import tecladoGenerico.TecladoGenerico;
  * 
  * 
  */
-public class Controlador extends Jugadores {
+public class Controlador {
 	// Atributos necesarios para el objeto controlador, estos son una partida, dos
 	// jugadores y el modo que nos dara
 	// toda la informacion que necesitamos
