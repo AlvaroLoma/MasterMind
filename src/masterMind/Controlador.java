@@ -168,7 +168,7 @@ public class Controlador {
 				ganador=2;
 				salir = true;
 			}
-		
+
 			partida.aumentarIntento();
 		} while (!salir);
 		
