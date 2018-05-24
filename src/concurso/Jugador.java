@@ -3,12 +3,13 @@ package concurso;
 public abstract class Jugador {
 	
 	protected byte[][] resultado;
-	private byte[] combSecreta;
-	private byte[] mejorIntento;
+	protected byte[] combSecreta= new byte[8];
+	protected byte[] mejorIntento;
 
 
 	public void setCombSecreta(byte[] combS) {
 		for(int x=0;x<combS.length;x++) {
+			
 			combSecreta[x]=combS[x];
 		}
 		
