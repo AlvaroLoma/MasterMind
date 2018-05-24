@@ -91,7 +91,7 @@ public class Tablero implements Dibujar {
 	public void nuevoIntento(Combinacion[] nuevoIntento) {
 
 		for (int i = 0; i < nuevoIntento.length; i++) {
-
+			
 			tableroPartida[intento][i] = new Combinacion(nuevoIntento[i].getNumero());
 		}
 
@@ -142,7 +142,7 @@ public class Tablero implements Dibujar {
 
 			if (comprobacion[intento][i] != null
 					&& comprobacion[intento][i].equals(Colores.ROJO + "*" + Colores.RESET)) {
-
+				System.out.println("bor");
 				correcto++;
 			}
 		}

@@ -24,8 +24,8 @@ public class Concurso {
 //		participantes.add ( new Adri());
 //		participantes.add (new Ismael());
 //		participantes.add (new Esther());
-//		participantes.add (new Lidia());
-//		participantes.add (new Alvaro());
+	participantes.add (new masterMindLidia.ConcursoLidia());
+	participantes.add (new masterMind.ConcursoAlvaro());
 //		participantes.add (new Lolo());
 //		participantes.add (new Maria());
 //		participantes.add (new Nicolas());

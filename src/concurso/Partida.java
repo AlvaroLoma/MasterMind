@@ -33,7 +33,7 @@ public class Partida {
 				ganador =2;
 				salir = true;
 			}
-			
+			System.out.println("turno");
 			aumentarIntento();
 		} while (!salir);
 
