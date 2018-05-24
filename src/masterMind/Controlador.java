@@ -32,12 +32,12 @@ public class Controlador {
 	 */
 	private static boolean principio=false;
 	private int ganador;
-	private Partida partida;
+	protected Partida partida;
 
 	/**
 	 * Atributo clase Jugador, necesario para el control de jugador 1
 	 */
-	private Jugador jugador1;
+	protected Jugador jugador1;
 
 	/**
 	 * Atributo clase Jugador, necesario para el control de jugador 2
@@ -81,6 +81,11 @@ public class Controlador {
 		}
 		crearJugadores();
 
+	}
+
+	public Controlador(ModoJuego modo2) {
+		partida= new Partida(modo2);
+		jugador1= new Maquina(modo2);
 	}
 
 	/**

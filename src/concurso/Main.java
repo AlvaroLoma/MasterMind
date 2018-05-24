@@ -1,12 +1,16 @@
 package concurso;
 
+import masterMind.ConcursoAlvaro;
+
 public class Main {
 
 	public static void main(String[] args) {
 		int ganador=0;
 		int rondas=0;
 		Concurso concurso = new Concurso();
-		Combate combate =buscarParticipantes(concurso);
+		//Combate combate =buscarParticipantes(concurso);
+		System.out.println("gg");
+		Combate combate= new Combate(new ConcursoAlvaro(),new ConcursoAlvaro());
 		do {
 			Partida partida = new Partida(combate.getJugador1(),combate.getJugador2());
 			ganador=partida.partidaDificil();
