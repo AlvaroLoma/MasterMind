@@ -15,7 +15,11 @@ class PruebasTest {
 	String negro = Colores.NEGRO + "*" + Colores.RESET;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 =======
 <<<<<<< HEAD
 >>>>>>> Stashed changes
@@ -79,6 +83,7 @@ class PruebasTest {
 //		Assert.assertNotEquals(lista, jugador1.comprobacion());
 //	}
 >>>>>>> master
+<<<<<<< Updated upstream
 
 //	@Test
 //	void comprobacionModoDIficilCorrecta() {
@@ -110,6 +115,8 @@ class PruebasTest {
 //		Assert.assertNotEquals(lista, jugador1.comprobacion());
 //	}
 
+=======
+>>>>>>> Stashed changes
 
 	@Test
 	void comprobacionModoMedioCorrecta() {

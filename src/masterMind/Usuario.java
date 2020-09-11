@@ -79,21 +79,30 @@ public class Usuario extends Jugador {
 
 		combinaciones = nuevoIntento;
 <<<<<<< HEAD
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
 		return nuevoIntento;
 
 	}
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
 =======
+=======
+>>>>>>> Stashed changes
 =======
 
 		return nuevoIntento;
 
 	}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 	@Override
@@ -103,7 +112,11 @@ public class Usuario extends Jugador {
 	}
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> master
+>>>>>>> Stashed changes
 =======
 >>>>>>> master
 >>>>>>> Stashed changes

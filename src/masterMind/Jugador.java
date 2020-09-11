@@ -133,15 +133,21 @@ public abstract class Jugador {
 	abstract protected Combinacion[] nuevoIntento();
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 	abstract String respuesta();
 
 
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 =======
 	abstract String respuesta();
 
 >>>>>>> master
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }

@@ -68,7 +68,12 @@ public class Maquina extends Jugador {
 	}
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 =======
 <<<<<<< HEAD
 =======
@@ -83,7 +88,11 @@ public class Maquina extends Jugador {
 	}
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> master
+>>>>>>> Stashed changes
 =======
 >>>>>>> master
 >>>>>>> Stashed changes

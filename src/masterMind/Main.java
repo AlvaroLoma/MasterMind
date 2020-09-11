@@ -2,6 +2,7 @@ package masterMind;
 
 import java.io.IOException;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
 public class Main {  
@@ -31,6 +32,11 @@ public class Main {
 
 public class Main {  
 
+=======
+
+public class Main {  
+
+>>>>>>> Stashed changes
 	public static void main(String[] args) {
 		Controlador controlador;
 		int salir=0;
@@ -52,6 +58,9 @@ public class Main {
 			e.printStackTrace();
 		}
 >>>>>>> master
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		}while(salir<5);
 		try {
