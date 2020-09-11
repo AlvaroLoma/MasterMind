@@ -12,10 +12,9 @@ import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 import org.omg.Messaging.SyncScopeHelper;
 
-<<<<<<< Updated upstream
-=======
+
 import concurso.Jugadores;
->>>>>>> Stashed changes
+
 import tecladoGenerico.TecladoGenerico;
 
 /**
@@ -27,30 +26,24 @@ import tecladoGenerico.TecladoGenerico;
  * 
  * 
  */
-<<<<<<< HEAD
-public class Controlador {
-=======
+
+
+
 public class Controlador extends Jugadores {
->>>>>>> master
+
 	// Atributos necesarios para el objeto controlador, estos son una partida, dos
 	// jugadores y el modo que nos dara
 	// toda la informacion que necesitamos
 	/**
 	 * Atributo clase partida, necesario para el desarrollo de la partida
 	 */
-<<<<<<< Updated upstream
+
 	private static boolean principio=false;
 	private int ganador;
 	protected Partida partida;
-=======
-<<<<<<< HEAD
 
-=======
-	private static boolean principio=false;
-	private int ganador;
->>>>>>> master
-	private Partida partida;
->>>>>>> Stashed changes
+
+
 
 	/**
 	 * Atributo clase Jugador, necesario para el control de jugador 1
@@ -66,14 +59,10 @@ public class Controlador extends Jugadores {
 	 */
 
 	private ModoJuego modo;
-<<<<<<< Updated upstream
+
 	 static Writer fichero = null;
-=======
-<<<<<<< HEAD
-=======
-	 static Writer fichero = null;
->>>>>>> master
->>>>>>> Stashed changes
+
+
 
 	/**
 	 * Contruye el objeto controlador que inicializara el resto de objetos
@@ -95,11 +84,7 @@ public class Controlador extends Jugadores {
 		pantallaInicio();
 		menuModoJuego();
 		partida = new Partida(modo);
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
+
 		try {
 			if(!principio) {
 			fichero= new BufferedWriter(new OutputStreamWriter(new FileOutputStream("fichero_escritura2.html"), "UTF-8"));	
@@ -109,10 +94,7 @@ public class Controlador extends Jugadores {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-<<<<<<< Updated upstream
-=======
->>>>>>> master
->>>>>>> Stashed changes
+
 		crearJugadores();
 
 	}
@@ -161,14 +143,11 @@ public class Controlador extends Jugadores {
 			jugador1 = new Maquina(modo);
 			jugador2 = new Maquina(modo);
 			jugarModoDIficil(); // Metodo para jugar la partida en modo dficil
-<<<<<<< Updated upstream
+
 			Tablero.intento=0;
-=======
-<<<<<<< HEAD
-=======
+
 			Tablero.intento=0;
->>>>>>> master
->>>>>>> Stashed changes
+
 		}
 
 	}
@@ -189,17 +168,7 @@ public class Controlador extends Jugadores {
 	 * punto 1
 	 */
 	private void jugarModoDIficil() {
-<<<<<<< Updated upstream
-	
-		
-=======
-<<<<<<< HEAD
 
-=======
-	
-		
->>>>>>> master
->>>>>>> Stashed changes
 		boolean salir = false;
 		do {
 
@@ -208,15 +177,13 @@ public class Controlador extends Jugadores {
 			partida.dibujarTableroDoble();
 
 			try { // Hace que el juego espere medio segundo entre turno y turno
-<<<<<<< Updated upstream
+
 				Thread.sleep(100);
-=======
-<<<<<<< HEAD
+
 				Thread.sleep(500);
-=======
+
 				Thread.sleep(100);
->>>>>>> master
->>>>>>> Stashed changes
+
 			} catch (InterruptedException e) {
 				System.out.println("Thread Interrupted");
 			}
@@ -244,11 +211,7 @@ public class Controlador extends Jugadores {
 
 	}
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
+
 	private void primeraParte() {
 		try {
 			fichero.write("<html lang=\"en\" dir=\"ltr\">\n" + "  <head>\n" + 
@@ -341,58 +304,7 @@ public class Controlador extends Jugadores {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-<<<<<<< Updated upstream
 
-	}
-
-	private void escribirIntentos(Tablero tablero) {
-		for (int x = 0; x < tablero.intento; x++) {
-
-			for (int e = 0; e < modo.getNumCasillas(); e++) {
-
-				try {
-					switch (tablero.tableroPartida[x][e].getNumero()) {
-
-					case 1:
-						fichero.write("<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>\n");
-						break;
-					case 2:
-						fichero.write("<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>\n");
-						break;
-					case 3:
-						fichero.write("<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>\n");
-						break;
-					case 4:
-						fichero.write("<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>\n");
-						break;
-					case 5:
-						fichero.write("<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>\n");
-						break;
-					case 6:
-						fichero.write("<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>\n");
-						break;
-					case 7:
-						fichero.write("<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>\n");
-						break;
-					case 8:
-						fichero.write("<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>\n");
-						break;
-					case 9:
-						fichero.write("<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>\n");
-						break;
-					case 10:
-						fichero.write("<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>\n");
-						break;
-					}
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-			}
-			escribirComprobacion(x, tablero);
-		}
-=======
->>>>>>> Stashed changes
 
 	}
 
@@ -443,9 +355,12 @@ public class Controlador extends Jugadores {
 			escribirComprobacion(x, tablero);
 		}
 
+
 	}
 
->>>>>>> master
+
+
+
 	/**
 	 * Metodo encargado en desarrollar la partida en el modo de juego medio
 	 *

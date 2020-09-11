@@ -67,11 +67,7 @@ public class Maquina extends Jugador {
 
 	}
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
+
 	public Maquina() {
 		
 		super(crearCombinacionGanadora(ModoJuego.DIFICIL), ModoJuego.DIFICIL);
@@ -81,10 +77,7 @@ public class Maquina extends Jugador {
 		intentoFinal = new Combinacion[modo.getNumCasillas()];
 	}
 
-<<<<<<< Updated upstream
-=======
->>>>>>> master
->>>>>>> Stashed changes
+
 	/**
 	 * Metodo que creara una combinacion ganadora dependiendo del modo de juego que
 	 * se haya seleccionado

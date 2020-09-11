@@ -77,10 +77,7 @@ class PruebasTest {
 //
 //		Assert.assertNotEquals(lista, jugador1.comprobacion());
 //	}
-<<<<<<< Updated upstream
-=======
->>>>>>> master
->>>>>>> Stashed changes
+
 
 	@Test
 	void comprobacionModoMedioCorrecta() {

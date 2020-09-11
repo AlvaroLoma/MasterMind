@@ -34,15 +34,7 @@ public class Tablero implements Dibujar {
 		comprobacion = new String[modo.getIntentos()][modo.getNumCasillas()];
 
 	}
-<<<<<<< Updated upstream
-	
-=======
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> master
->>>>>>> Stashed changes
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -150,7 +142,7 @@ public class Tablero implements Dibujar {
 
 			if (comprobacion[intento][i] != null
 					&& comprobacion[intento][i].equals(Colores.ROJO + "*" + Colores.RESET)) {
-				System.out.println("bor");
+				
 				correcto++;
 			}
 		}
