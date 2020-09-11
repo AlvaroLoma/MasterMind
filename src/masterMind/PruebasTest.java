@@ -14,9 +14,7 @@ class PruebasTest {
 	String rojo = Colores.ROJO + "*" + Colores.RESET;
 	String negro = Colores.NEGRO + "*" + Colores.RESET;
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
+
 	@Test
 	void comprobacionModoDIficilCorrecta() {
 		ModoJuego modo = ModoJuego.DIFICIL;
@@ -46,8 +44,7 @@ class PruebasTest {
 
 		Assert.assertNotEquals(lista, jugador1.comprobacion());
 	}
-=======
->>>>>>> Stashed changes
+
 //	@Test
 //	void comprobacionModoDIficilCorrecta() {
 //		ModoJuego modo = ModoJuego.DIFICIL;
