@@ -22,7 +22,7 @@ public class Main {
 		try {
 			controlador.fichero.write("<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		}
 
