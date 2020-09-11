@@ -12,9 +12,13 @@ import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 import org.omg.Messaging.SyncScopeHelper;
 
+<<<<<<< Updated upstream
 
 import concurso.Jugadores;
 
+=======
+import concurso.Jugadores;
+>>>>>>> Stashed changes
 import tecladoGenerico.TecladoGenerico;
 
 /**
@@ -26,24 +30,41 @@ import tecladoGenerico.TecladoGenerico;
  * 
  * 
  */
+<<<<<<< Updated upstream
 
 
 
 public class Controlador extends Jugadores {
 
+=======
+<<<<<<< HEAD
+public class Controlador {
+=======
+public class Controlador extends Jugadores {
+>>>>>>> master
+>>>>>>> Stashed changes
 	// Atributos necesarios para el objeto controlador, estos son una partida, dos
 	// jugadores y el modo que nos dara
 	// toda la informacion que necesitamos
 	/**
 	 * Atributo clase partida, necesario para el desarrollo de la partida
 	 */
+<<<<<<< HEAD
 
+<<<<<<< Updated upstream
 	private static boolean principio=false;
 	private int ganador;
 	protected Partida partida;
 
 
 
+=======
+=======
+	private static boolean principio=false;
+	private int ganador;
+>>>>>>> master
+	private Partida partida;
+>>>>>>> Stashed changes
 
 	/**
 	 * Atributo clase Jugador, necesario para el control de jugador 1
@@ -59,6 +80,10 @@ public class Controlador extends Jugadores {
 	 */
 
 	private ModoJuego modo;
+<<<<<<< HEAD
+=======
+	 static Writer fichero = null;
+>>>>>>> master
 
 	 static Writer fichero = null;
 
@@ -84,7 +109,12 @@ public class Controlador extends Jugadores {
 		pantallaInicio();
 		menuModoJuego();
 		partida = new Partida(modo);
+<<<<<<< Updated upstream
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 		try {
 			if(!principio) {
 			fichero= new BufferedWriter(new OutputStreamWriter(new FileOutputStream("fichero_escritura2.html"), "UTF-8"));	
@@ -94,7 +124,11 @@ public class Controlador extends Jugadores {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> master
+>>>>>>> Stashed changes
 		crearJugadores();
 
 	}
@@ -143,11 +177,18 @@ public class Controlador extends Jugadores {
 			jugador1 = new Maquina(modo);
 			jugador2 = new Maquina(modo);
 			jugarModoDIficil(); // Metodo para jugar la partida en modo dficil
+<<<<<<< Updated upstream
 
 			Tablero.intento=0;
 
 			Tablero.intento=0;
 
+=======
+<<<<<<< HEAD
+=======
+			Tablero.intento=0;
+>>>>>>> master
+>>>>>>> Stashed changes
 		}
 
 	}
@@ -168,7 +209,12 @@ public class Controlador extends Jugadores {
 	 * punto 1
 	 */
 	private void jugarModoDIficil() {
+<<<<<<< HEAD
 
+=======
+	
+		
+>>>>>>> master
 		boolean salir = false;
 		do {
 
@@ -177,6 +223,7 @@ public class Controlador extends Jugadores {
 			partida.dibujarTableroDoble();
 
 			try { // Hace que el juego espere medio segundo entre turno y turno
+<<<<<<< Updated upstream
 
 				Thread.sleep(100);
 
@@ -184,6 +231,13 @@ public class Controlador extends Jugadores {
 
 				Thread.sleep(100);
 
+=======
+<<<<<<< HEAD
+				Thread.sleep(500);
+=======
+				Thread.sleep(100);
+>>>>>>> master
+>>>>>>> Stashed changes
 			} catch (InterruptedException e) {
 				System.out.println("Thread Interrupted");
 			}
@@ -211,7 +265,12 @@ public class Controlador extends Jugadores {
 
 	}
 
+<<<<<<< Updated upstream
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 	private void primeraParte() {
 		try {
 			fichero.write("<html lang=\"en\" dir=\"ltr\">\n" + "  <head>\n" + 
@@ -304,7 +363,10 @@ public class Controlador extends Jugadores {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
 	}
 
@@ -355,12 +417,18 @@ public class Controlador extends Jugadores {
 			escribirComprobacion(x, tablero);
 		}
 
+<<<<<<< Updated upstream
 
 	}
 
 
 
 
+=======
+	}
+
+>>>>>>> master
+>>>>>>> Stashed changes
 	/**
 	 * Metodo encargado en desarrollar la partida en el modo de juego medio
 	 *

@@ -1,6 +1,7 @@
 package concurso;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -43,6 +44,8 @@ public class Concurso {
 	}
 	
 =======
+=======
+>>>>>>> Stashed changes
 import masterMindLidia.*;
 
 public class Concurso {
@@ -56,5 +59,8 @@ public class Concurso {
 
 	}
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }

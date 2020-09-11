@@ -78,14 +78,23 @@ public class Usuario extends Jugador {
 		}
 
 		combinaciones = nuevoIntento;
+<<<<<<< HEAD
 
 
 		return nuevoIntento;
 
 	}
 
+<<<<<<< Updated upstream
 
 
+=======
+=======
+
+		return nuevoIntento;
+
+	}
+>>>>>>> Stashed changes
 
 	@Override
 	String respuesta() {
@@ -93,5 +102,9 @@ public class Usuario extends Jugador {
 		return null;
 	}
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> master
+>>>>>>> Stashed changes
 }
