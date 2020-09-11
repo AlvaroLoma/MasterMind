@@ -34,7 +34,15 @@ public class Tablero implements Dibujar {
 		comprobacion = new String[modo.getIntentos()][modo.getNumCasillas()];
 
 	}
+<<<<<<< Updated upstream
 	
+=======
+<<<<<<< HEAD
+
+=======
+	
+>>>>>>> master
+>>>>>>> Stashed changes
 	/*
 	 * (non-Javadoc)
 	 * 

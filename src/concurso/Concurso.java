@@ -1,5 +1,6 @@
 package concurso;
 
+<<<<<<< Updated upstream
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -41,4 +42,19 @@ public class Concurso {
 		
 	}
 	
+=======
+import masterMindLidia.*;
+
+public class Concurso {
+	
+	
+	public static void main(String[] args) {
+		
+	
+		Jugadores jugador;
+		
+
+	}
+
+>>>>>>> Stashed changes
 }

@@ -78,15 +78,29 @@ public class Usuario extends Jugador {
 		}
 
 		combinaciones = nuevoIntento;
+<<<<<<< HEAD
 
 		return nuevoIntento;
 
 	}
 
+<<<<<<< Updated upstream
+=======
+=======
+
+		return nuevoIntento;
+
+	}
+
+>>>>>>> Stashed changes
 	@Override
 	String respuesta() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> master
+>>>>>>> Stashed changes
 }
