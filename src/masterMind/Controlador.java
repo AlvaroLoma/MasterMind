@@ -1,5 +1,18 @@
 package masterMind;
 
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
+import org.omg.Messaging.SyncScopeHelper;
+
+import concurso.Jugadores;
 import tecladoGenerico.TecladoGenerico;
 
 /**
@@ -11,7 +24,11 @@ import tecladoGenerico.TecladoGenerico;
  * 
  * 
  */
+<<<<<<< HEAD
 public class Controlador {
+=======
+public class Controlador extends Jugadores {
+>>>>>>> master
 	// Atributos necesarios para el objeto controlador, estos son una partida, dos
 	// jugadores y el modo que nos dara
 	// toda la informacion que necesitamos
@@ -20,6 +37,10 @@ public class Controlador {
 	 */
 <<<<<<< HEAD
 
+=======
+	private static boolean principio=false;
+	private int ganador;
+>>>>>>> master
 	private Partida partida;
 >>>>>>> Stashed changes
 
@@ -66,6 +87,18 @@ public class Controlador {
 		pantallaInicio();
 		menuModoJuego();
 		partida = new Partida(modo);
+<<<<<<< HEAD
+=======
+		try {
+			if(!principio) {
+			fichero= new BufferedWriter(new OutputStreamWriter(new FileOutputStream("fichero_escritura2.html"), "UTF-8"));	
+			}
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+>>>>>>> master
 		crearJugadores();
 
 	}
@@ -114,6 +147,10 @@ public class Controlador {
 			jugador1 = new Maquina(modo);
 			jugador2 = new Maquina(modo);
 			jugarModoDIficil(); // Metodo para jugar la partida en modo dficil
+<<<<<<< HEAD
+=======
+			Tablero.intento=0;
+>>>>>>> master
 		}
 
 	}
@@ -148,7 +185,11 @@ public class Controlador {
 			partida.dibujarTableroDoble();
 
 			try { // Hace que el juego espere medio segundo entre turno y turno
+<<<<<<< HEAD
 				Thread.sleep(500);
+=======
+				Thread.sleep(100);
+>>>>>>> master
 			} catch (InterruptedException e) {
 				System.out.println("Thread Interrupted");
 			}
@@ -176,6 +217,153 @@ public class Controlador {
 
 	}
 
+<<<<<<< HEAD
+=======
+	private void primeraParte() {
+		try {
+			fichero.write("<html lang=\"en\" dir=\"ltr\">\n" + "  <head>\n" + 
+		"    <style type=\"text/css\">\n"+
+					"     span{\n" + "      display: inline;\n" + "    }\n" + "     "+ 
+					" 	  div{\n"+ 
+					"        border: black 1px solid;\n" +
+					"		width: 25%;\n" + "		padding-top:2%;\n"
+					+ "		padding-left:2%;\n" + "		padding-right:15px;\n" + "		padding-bottom:2%;\n"
+					+ "		float:left;\n" + "		background-color:#663300;" + "       \n" + "      }\n"
+					+ "      .rojo{\n" + "        color: red;\n" + "        background-color: red;\n" + "      }\n"
+					+ "      .verde{\n" + "        color: green;\n" + "        background-color: green;\n" + "      }\n"
+					+ "      .amarillo{\n" + "        color: yellow;\n" + "        background-color: yellow;\n"
+					+ "        \n" + "      }\n" + "      .rosa{\n" + "        color: pink;\n"
+					+ "        background-color: pink;\n" + "      }\n" + "      .celeste{\n" + "        color:cyan;\n"
+					+ "        background-color: cyan;\n" + "      }\n" + "      .morado{\n"
+					+ "        color: purple;\n" + "        background-color: purple;\n" + "      }\n"
+					+ "      .burdeo{\n" + "        color: brown;\n" + "        background-color: brown;\n"
+					+ "      }\n" + "      .gris{\n" + "        color: grey;\n" + "        background-color: grey;\n"
+					+ "      }\n" + "      .azul{\n" + "        color: blue;\n" + "        background-color: blue;\n"
+					+ "      }\n" + "      .mostaza{\n" + "        color: #808c25;\n"
+					+ "        background-color: #808c25;\n" + "      }\n" + "      .negro{\n"
+					+ "        color: black;\n" + "      }\n" + "      .ganador{\n" + "		background-color: #33ccff;"
+					+ "        color: black;\n" + "		width: 53%;" + "		text-align:center;" + "      }\n"
+					+ "      .contenedor{\n" + "		background-color:black;\n" + " 		box-sizing: border-box;\n"
+					+ "		padding-left:25%;\n" +  "        color: black;\n"
+					+ "		width: 100%;" + "      }\n" + "      .rojo2{\n" + "        color: white;\n" + "      }\n"
+					+ "    </style>\n" + "    <meta charset=\"utf-8\">\n" + "    <title>Concurso MasterMind</title>"
+					+ "  </head>\n" + "  <body>\n" + "<h1>Nueva partida</h1>\n");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	private void documentoConcurso() {
+		try {
+			fichero.write("<div class='contenedor'>\n");
+			fichero.write("<h1 class='rojo2'>Nueva ronda</h1>\n");
+			fichero.write("<div class='ganador'>\n");
+			fichero.write("<span class='ganador'>El ganador es: El jugador " + ganador + " </span>\n" + "<br/>\n");
+			fichero.write("</div>\n");
+			fichero.write("<br/>\n");
+			fichero.write("<br/>\n");
+			fichero.write("<br/>\n");
+			fichero.write("<br/>\n");
+			fichero.write("<div>\n");
+			fichero.write("<h4 class='rojo2'>Tablero del jugador 1</h4>\n");
+			escribirIntentos(partida.tablero);
+			fichero.write("</div>\n");
+			fichero.write("<div>\n");
+			fichero.write("<h4 class='rojo2'>Tablero Jugador 2</h4>\n");
+			escribirIntentos(partida.tablero2);
+			fichero.write("</div>\n");
+			fichero.write("</div>\n");
+			fichero.write("</body>\n </html>");
+
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+	}
+
+	private void escribirComprobacion(int a, Tablero tablero) {
+		for (int x = a; x < a + 1; x++) {
+			for (int f = 0; f < modo.getNumCasillas(); f++) {
+				try {
+					if (tablero.comprobacion[x][f] != null) {
+						switch (tablero.comprobacion[x][f]) {
+						case Colores.ROJO + "*" + Colores.RESET:
+							fichero.write("<span class='rojo2'>*</span>");
+							break;
+						case Colores.NEGRO + "*" + Colores.RESET:
+							fichero.write("<span class='negro'>*</span>");
+							break;
+						}
+					}
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+		}
+		try {
+			fichero.write("<br/>\n");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	private void escribirIntentos(Tablero tablero) {
+		for (int x = 0; x < tablero.intento; x++) {
+
+			for (int e = 0; e < modo.getNumCasillas(); e++) {
+
+				try {
+					switch (tablero.tableroPartida[x][e].getNumero()) {
+
+					case 1:
+						fichero.write("<span class='amarillo'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 2:
+						fichero.write("<span class='rosa'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 3:
+						fichero.write("<span class='celeste'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 4:
+						fichero.write("<span class='morado'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 5:
+						fichero.write("<span class='verde'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 6:
+						fichero.write("<span class='burdeo'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 7:
+						fichero.write("<span class='gris'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 8:
+						fichero.write("<span class='azul'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 9:
+						fichero.write("<span class='mostaza'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					case 10:
+						fichero.write("<span class='rojo'>&nbsp &nbsp</span><span>&nbsp</span>\n");
+						break;
+					}
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+			escribirComprobacion(x, tablero);
+		}
+
+	}
+
+>>>>>>> master
 	/**
 	 * Metodo encargado en desarrollar la partida en el modo de juego medio
 	 *
