@@ -24,25 +24,22 @@ import tecladoGenerico.TecladoGenerico;
  * 
  * 
  */
-<<<<<<< HEAD
-public class Controlador {
-=======
+
+
 public class Controlador extends Jugadores {
->>>>>>> master
+
 	// Atributos necesarios para el objeto controlador, estos son una partida, dos
 	// jugadores y el modo que nos dara
 	// toda la informacion que necesitamos
 	/**
 	 * Atributo clase partida, necesario para el desarrollo de la partida
 	 */
-<<<<<<< HEAD
 
-=======
 	private static boolean principio=false;
 	private int ganador;
->>>>>>> master
+
 	private Partida partida;
->>>>>>> Stashed changes
+
 
 	/**
 	 * Atributo clase Jugador, necesario para el control de jugador 1
@@ -58,12 +55,9 @@ public class Controlador extends Jugadores {
 	 */
 
 	private ModoJuego modo;
-<<<<<<< HEAD
-=======
-	 static Writer fichero = null;
->>>>>>> master
 
 	 static Writer fichero = null;
+
 
 
 
@@ -87,8 +81,7 @@ public class Controlador extends Jugadores {
 		pantallaInicio();
 		menuModoJuego();
 		partida = new Partida(modo);
-<<<<<<< HEAD
-=======
+
 		try {
 			if(!principio) {
 			fichero= new BufferedWriter(new OutputStreamWriter(new FileOutputStream("fichero_escritura2.html"), "UTF-8"));	
@@ -98,7 +91,7 @@ public class Controlador extends Jugadores {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
->>>>>>> master
+
 		crearJugadores();
 
 	}
@@ -147,10 +140,9 @@ public class Controlador extends Jugadores {
 			jugador1 = new Maquina(modo);
 			jugador2 = new Maquina(modo);
 			jugarModoDIficil(); // Metodo para jugar la partida en modo dficil
-<<<<<<< HEAD
-=======
+
 			Tablero.intento=0;
->>>>>>> master
+
 		}
 
 	}
@@ -171,25 +163,20 @@ public class Controlador extends Jugadores {
 	 * punto 1
 	 */
 	private void jugarModoDIficil() {
-<<<<<<< HEAD
 
-=======
-	
-		
->>>>>>> master
 		boolean salir = false;
 		do {
 
 			partida.intentoUsuario(jugador1.nuevoIntento(), jugador1.comprobacion());
 			partida.intentoMaquina(jugador2.nuevoIntento(), jugador2.comprobacion());
-			partida.dibujarTableroDoble();
+			partida.dibujarTableroDoble(); 
 
 			try { // Hace que el juego espere medio segundo entre turno y turno
-<<<<<<< HEAD
+
 				Thread.sleep(500);
-=======
+
 				Thread.sleep(100);
->>>>>>> master
+
 			} catch (InterruptedException e) {
 				System.out.println("Thread Interrupted");
 			}
@@ -217,8 +204,6 @@ public class Controlador extends Jugadores {
 
 	}
 
-<<<<<<< HEAD
-=======
 	private void primeraParte() {
 		try {
 			fichero.write("<html lang=\"en\" dir=\"ltr\">\n" + "  <head>\n" + 
@@ -363,7 +348,6 @@ public class Controlador extends Jugadores {
 
 	}
 
->>>>>>> master
 	/**
 	 * Metodo encargado en desarrollar la partida en el modo de juego medio
 	 *

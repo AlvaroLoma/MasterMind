@@ -23,7 +23,7 @@ public class ConcursoAlvaro extends Jugador {
 		
 		
 		System.out.println("ui");
-		return controlador.partida.buscarGanador();
+		return true;
 	}
 
 	@Override
@@ -72,8 +72,8 @@ public class ConcursoAlvaro extends Jugador {
 	public byte[] crearCombPropuesta() {
 		Combinacion combinacion[]=controlador.jugador1.nuevoIntento();
 		Colores.mostrarColores(combinacion);
-		controlador.partida.tablero.nuevoIntento(combinacion);
-		controlador.partida.aumentarIntento();
+//		controlador.partida.tablero.nuevoIntento(combinacion);
+//		controlador.partida.aumentarIntento();
 		byte[] combPropuesta= new byte[modo.getNumCasillas()];
 		for(int x=0;x<modo.getNumCasillas();x++) {
 			combPropuesta[x]=(byte)combinacion[x].getNumero();
